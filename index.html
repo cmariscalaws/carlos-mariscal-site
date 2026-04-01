@@ -1,89 +1,475 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Carlos Mariscal</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlos Mariscal | Senior Backend Engineer</title>
+  <meta
+    name="description"
+    content="Carlos Mariscal - Senior Backend Engineer specializing in distributed systems, cloud architecture, and AI-powered platforms."
+  />
   <style>
+    :root {
+      --bg: #0b1120;
+      --panel: #111827;
+      --panel-2: #172033;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-2: #22c55e;
+      --border: rgba(148, 163, 184, 0.18);
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
       margin: 0;
-      padding: 40px;
-      background: #0f172a;
-      color: #e2e8f0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(56, 189, 248, 0.12), transparent 30%),
+        linear-gradient(180deg, #0b1120 0%, #0f172a 100%);
+      color: var(--text);
+      line-height: 1.6;
     }
-    h1 {
-      font-size: 56px;
-      margin-bottom: 10px;
-    }
-    h2 {
-      color: #38bdf8;
-      font-weight: 400;
-    }
-    .section {
-      margin-top: 60px;
-    }
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
+
     a {
-      color: #38bdf8;
+      color: var(--accent);
       text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(11, 17, 32, 0.78);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      gap: 16px;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      color: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 88px 0 56px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.92rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      max-width: 900px;
+    }
+
+    .subtitle {
+      margin-top: 20px;
+      font-size: clamp(1.05rem, 2.1vw, 1.35rem);
+      color: var(--muted);
+      max-width: 780px;
+    }
+
+    .hero-actions {
+      margin-top: 32px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      border: 1px solid transparent;
+      transition: 0.2s ease;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      background: var(--accent);
+      color: #082f49;
+    }
+
+    .button-primary:hover {
+      background: #67d3fb;
+    }
+
+    .button-secondary {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .button-secondary:hover {
+      border-color: rgba(56, 189, 248, 0.45);
+      color: #fff;
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 46px;
+    }
+
+    .highlight {
+      background: rgba(17, 24, 39, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .highlight .metric {
+      display: block;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .highlight .label {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    section {
+      padding: 26px 0 18px;
+    }
+
+    .section-title {
+      font-size: 1.9rem;
+      margin: 0 0 8px;
+      color: #fff;
+    }
+
+    .section-intro {
+      margin: 0 0 24px;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .about-panel {
+      background: rgba(17, 24, 39, 0.75);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 28px;
+    }
+
+    .cards {
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(23, 32, 51, 0.95), rgba(17, 24, 39, 0.95));
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .tag-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .tag {
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      background: rgba(56, 189, 248, 0.08);
+      color: #cbeffd;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.86rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .contact-card {
+      background: rgba(17, 24, 39, 0.75);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .contact-label {
+      display: block;
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    footer {
+      padding: 42px 0 56px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .highlights,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
     }
   </style>
 </head>
-
 <body>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">Carlos Mariscal</div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#links">Links</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<h1>Carlos Mariscal</h1>
-<h2>Senior Backend Engineer | Distributed Systems | AI</h2>
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">Senior Backend Engineer</div>
+      <h1>Building scalable distributed systems, cloud platforms, and practical AI solutions.</h1>
+      <p class="subtitle">
+        I design and deliver resilient backend systems with a focus on reliability, performance,
+        operational simplicity, and measurable business impact.
+      </p>
 
-<div class="section">
-  <h3>About Me</h3>
-  <p>
-    I design and build scalable, fault-tolerant distributed systems in cloud environments.
-    I focus on solving complex backend problems, improving reliability, and driving engineering excellence.
-  </p>
-</div>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#projects">View Projects</a>
+        <a class="button button-secondary" href="mailto:carlosmariscal619@gmail.com">Contact Me</a>
+        <a class="button button-secondary" href="/resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+      </div>
 
-<div class="section">
-  <h3>Key Work</h3>
+      <div class="highlights">
+        <div class="highlight">
+          <span class="metric">220+</span>
+          <span class="label">Support channels served by an AI assistant deployment</span>
+        </div>
+        <div class="highlight">
+          <span class="metric">130M+</span>
+          <span class="label">Customer records processed in sanctions screening architecture</span>
+        </div>
+        <div class="highlight">
+          <span class="metric">26,000+</span>
+          <span class="label">Structured review artifacts generated in an AI pipeline</span>
+        </div>
+      </div>
+    </section>
 
-  <div class="card">
-    <h4>AI Support Assistant (Intuit)</h4>
-    <p>
-      Built a Slack-based AI assistant handling ~85% of support traffic across 220+ channels.
-      Reduced support volume by ~27% using LLMs, RAG, and automation pipelines.
-    </p>
-  </div>
+    <section id="about">
+      <h2 class="section-title">About</h2>
+      <p class="section-intro">
+        I’m a backend and platform engineer with deep experience building cloud-native systems,
+        modernizing legacy services, and using AI to solve real operational problems. My work spans
+        distributed systems, event-driven architectures, microservices, and engineering leadership.
+      </p>
+      <div class="about-panel">
+        I’ve led and delivered systems across support automation, compliance platforms, subscription
+        services, and internal AI tooling. I’m especially interested in roles where strong technical
+        execution, architecture, and pragmatic leadership all matter.
+        <div class="tag-row">
+          <span class="tag">Java</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">Python</span>
+          <span class="tag">AWS</span>
+          <span class="tag">Distributed Systems</span>
+          <span class="tag">AI / LLMs</span>
+          <span class="tag">Kafka</span>
+          <span class="tag">Kubernetes</span>
+        </div>
+      </div>
+    </section>
 
-  <div class="card">
-    <h4>Sanctions Screening Platform</h4>
-    <p>
-      Led migration to a scalable system screening 130M+ users using Kafka, microservices, and AWS infrastructure.
-    </p>
-  </div>
+    <section id="projects">
+      <h2 class="section-title">Selected Work</h2>
+      <p class="section-intro">
+        A few examples of systems I’ve built or led that delivered meaningful scale, reliability, and business value.
+      </p>
 
-  <div class="card">
-    <h4>AI Performance Review System (Zoox)</h4>
-    <p>
-      Designed and optimized an AI pipeline generating 26,000+ structured review artifacts.
-      Reduced runtime significantly and cut AI costs by up to 80%.
-    </p>
-  </div>
+      <div class="cards">
+        <article class="card">
+          <h3>AI Support Assistant — Intuit</h3>
+          <p>
+            Built a Slack-based AI assistant using OpenAI, RAG, Slack APIs, Jira APIs, and indexed internal
+            knowledge sources. The system supported more than 220 channels, handled roughly 85% of support
+            message traffic, and helped reduce support volume by about 27%.
+          </p>
+        </article>
 
-</div>
+        <article class="card">
+          <h3>Sanctions Screening Platform Migration</h3>
+          <p>
+            Led architecture and implementation for the migration from Amber Road to LexisNexis, including
+            backend services and cloud infrastructure. The resulting platform supported daily screenings,
+            audit workflows, and batch processing at scale across 130M+ Credit Karma records and 14M+ Mailchimp records.
+          </p>
+        </article>
 
-<div class="section">
-  <h3>Links</h3>
-  <p>
-    <a href="#">Resume</a> |
-    <a href="#">LinkedIn</a> |
-    <a href="#">GitHub</a>
-  </p>
-</div>
+        <article class="card">
+          <h3>AI Performance Review Assistant — Zoox</h3>
+          <p>
+            Designed and optimized an AI-assisted review pipeline that generated more than 26,000 structured
+            review artifacts for 2,800+ employees. Improved throughput with parallelism and batching, while reducing
+            AI costs significantly through caching and resilience patterns.
+          </p>
+        </article>
 
+        <article class="card">
+          <h3>Subscription & Catalog Modernization</h3>
+          <p>
+            Led modernization efforts from legacy integrations to Spring Boot microservices in AWS, improved
+            maintainability and performance of high-traffic APIs, and introduced idempotent event-driven designs
+            to reduce production issues in critical signup flows.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="links">
+      <h2 class="section-title">Links</h2>
+      <p class="section-intro">
+        You can find my professional profiles and resume here.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <span class="contact-label">GitHub</span>
+          <a href="https://github.com/cmariscalaws" target="_blank" rel="noopener noreferrer">
+            github.com/cmariscalaws
+          </a>
+        </div>
+
+        <div class="contact-card">
+          <span class="contact-label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/carlosmariscal" target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/carlosmariscal
+          </a>
+        </div>
+
+        <div class="contact-card">
+          <span class="contact-label">Resume</span>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            View resume PDF
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-intro">
+        The easiest way to reach me is by email or LinkedIn.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <span class="contact-label">Email</span>
+          <a href="mailto:carlosmariscal619@gmail.com">carlosmariscal619@gmail.com</a>
+        </div>
+
+        <div class="contact-card">
+          <span class="contact-label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/carlosmariscal" target="_blank" rel="noopener noreferrer">
+            Connect on LinkedIn
+          </a>
+        </div>
+
+        <div class="contact-card">
+          <span class="contact-label">Site</span>
+          Hosted on AWS with S3, CloudFront, Route 53, and ACM.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    © 2026 Carlos Mariscal
+  </footer>
 </body>
 </html>
