@@ -1,0 +1,224 @@
+Recommendations
+
+
+
+Received
+
+Given
+
+Pending
+
+Maria Goretti Rivera 
+
+· 1st
+
+Application Engineer at Zoox
+
+March 25, 2026, Carlos was senior to Maria Goretti but didn’t manage Maria Goretti directly
+
+All LinkedIn members
+
+On
+
+I've had the pleasure of working closely with Carlos over the past six months at Zoox and he has consistently been one of the most valuable members of our team.
+
+What stands out most about Carlos is his approach to engineering, he never just dives into the code. He takes the time to deeply understand the problem first, which reflects in the quality of his design and architecture work. His technical documents are always well-structured, clear and genuinely useful for everyone involved.
+
+Beyond his technical strengths, Carlos is a natural mentor. He has a remarkable ability to take large, complex challenges and break them down into clear, actionable steps, something that made a real difference for the people around him, myself included. He leads by example, collaborates generously and makes every team he's part of stronger.
+
+Any organization would be fortunate to have Carlos on their team.… more
+
+
+Gurveer Khakh 
+
+· 1st
+
+Software Engineer
+
+August 3, 2025, Gurveer worked with Carlos on the same team
+
+All LinkedIn members
+
+On
+
+It was a pleasure to work with Carlos at Intuit for 3+ years, where he served as a Staff Engineer. Carlos consistently demonstrated a rare blend of technical acumen, innovation, and leadership.
+
+One of his most significant contributions was designing and deploying a Slack-based AI support assistant. By integrating the Slack API, Jira API, OpenAI, and Glean RAG, he created a tool that automated support across more than 220 channels. This initiative was a game-changer, handling 85% of support message traffic and measurably reducing support volume by 27%. He also built a supporting metrics dashboard and insights pipeline to drive data-informed improvements, showcasing his commitment to both innovative solutions and continuous optimization.
+
+Another standout achievement was his development of a robust retry service to process the failed request. This service made our platform more resilient and less susceptible to disruptions caused by transient issues in dependencies or infrastructure. This project underscored his forward-thinking approach to system design and his ability to build robust, reliable solutions.
+
+Carlos is a natural leader and a truly collaborative team member. He is a detail-oriented and thoughtful problem-solver who consistently elevates the quality of work around him. His ability to tackle complex challenges with innovative and scalable solutions makes him an asset to any team. It was a privilege to work alongside him, and I highly recommend him without reservation.… more
+
+
+Dheeraj Williams Murthaty, CSM® CSPO® 
+
+· 1st
+
+Technical Program Manager | Ex-Deloitte
+
+July 25, 2025, Dheeraj Williams worked with Carlos on the same team
+
+All LinkedIn members
+
+On
+
+I had the pleasure of working with Carlos for 2+ years at Intuit. As a Staff Engineer / Tech Lead, he has demonstrated technical expertise, accountability and leadership consistently. He played a crucial role in orchestrating the legacy services to the modern microservices. He also implemented and recommended CICD and performance optimizations at the early stage of dev.
+He led a team which owned the Signup APIs with adept ownership and resolved many high priority & customer impacting issues. 
+He has also mentored junior engineers on the team and has consistenly nurtured and invested in their development. 
+I hiigly recommend Carlos to anyone seeking a great Engineer and a true leader!… more
+
+
+Raul I. Garcia 
+
+· 1st
+
+Sr. Staff Software Engineer @ eHealth, Inc.
+
+July 9, 2025, Raul I. worked with Carlos on the same team
+
+All LinkedIn members
+
+On
+
+I had the pleasure of working with Carlos for nearly seven years at Intuit, where he consistently demonstrated deep technical expertise, leadership, and a strong sense of ownership. As a Staff Engineer, Carlos played a key role in refactoring legacy systems into scalable, modern architectures by applying his strong knowledge of software design patterns, cloud computing, and clean, maintainable coding practices.
+
+He also introduced several performance optimizations across the oBill and Sanctions Screening platforms, many of which resulted in measurable revenue gains. In addition to his architectural work, Carlos proactively leveraged AI to create internal tools that simplified developer workflows, improved productivity, and enhanced code quality.
+
+Carlos is highly detail-oriented, operates with integrity, and brings a thoughtful and forward-looking approach to every project. I recommend him without hesitation.… more
+
+
+Tanvi Panchal 
+
+· 1st
+
+Software Development Manager at Ingram Micro (Micro Services, Java, Enterprise Integration, Distributed System, Backend Development)
+
+July 8, 2025, Carlos was senior to Tanvi but didn’t manage Tanvi directly
+
+All LinkedIn members
+
+On
+
+I had the pleasure of working with Carlos for six years at Intuit, where he served as the Technical Lead for the Online Billing Platform. During this time, Carlos led several key initiatives, including the migration of services from on-premise infrastructure to the cloud, transitioning legacy Mule services to modern Spring Boot microservices, and significantly enhancing system performance.
+
+One of his standout contributions was refactoring a complex and outdated Catalog API, which not only improved system performance but also made the codebase far more maintainable. Carlos also introduced a Redis-based caching layer that boosted response times by 90% for cache hits — a remarkable improvement.
+
+Carlos played a pivotal role in enhancing customer-facing subscription signup APIs and resolving high-impact production issues. His ability to lead by example was evident in how he mentored junior engineers, teaching them best practices and design patterns while also offering hands-on support when needed.
+
+He also designed and implemented an event-driven architecture to tackle challenging idempotency issues in the subscription creation service — a critical advancement for the platform's reliability.
+
+Carlos is a thoughtful listener, a natural team player, and a self-starter with exceptional technical acumen. His collaborative and approachable leadership style creates a positive and productive work environment. It was a true privilege to collaborate with Carlos, and I learned a great deal from his expertise, both technically and functionally.… more
+
+
+Kittinan Ponkaew 
+
+· 1st
+
+Software Engineer
+
+July 7, 2025, Kittinan worked with Carlos on the same team
+
+All LinkedIn members
+
+On
+
+I worked with Carlos for 4 years at Intuit, where he was the team lead and I was a fairly junior engineer at the time. Carlos's leadership style stood out as exceptional—he encouraged me to explore new ideas, provided opportunities for growth, and helped me learn valuable lessons from mistakes without fear of judgment. His technical expertise, paired with his ability to foster a collaborative and supportive environment, made him an inspiring mentor. Carlos consistently invested in the development of those around him, and his guidance had a lasting impact on my career. I wholeheartedly recommend Carlos to any team seeking a talented leader who excels at bringing out the best in others.… more
+
+
+Rao Madhavrao
+
+· 1st
+
+Senior Director Bioinformatics
+
+May 19, 2010, Rao managed Carlos directly
+
+All LinkedIn members
+
+On
+
+Carlos is a very sharp, detailed oriented and dependable senior software developer with advanced skills in enterprise wide web development. He started making significant contributions to the project within a week of starting work and within a month he was already leading a project with accolades from anyone and everyone he interacted with. One of his greatest skills is to excel when treading into unfamiliar areas. He is the kind of person who makes the Manager's job easy because there is no need to manage him!
+
+
+Eric Knight 
+
+· 1st
+
+Global Head of EHS & Sustainability at Ultragenyx Pharmaceutical Inc.
+
+December 9, 2009, Eric worked with Carlos on the same team
+
+All LinkedIn members
+
+On
+
+Carlos receives my highest recommendation. He is a very competent and detail orientated professional that also effectively manages and motivates his team to achieve their goals. Carlos always follows through on deliverables and is a pleasure to work with.
+
+
+Svetlin Stanchev 
+
+· 1st
+
+Senior Mobile Engineer
+
+November 18, 2009, Svetlin worked with Carlos on the same team
+
+All LinkedIn members
+
+On
+
+Carlos and I worked as fellow external consultants on the brand-new  Java + REST web-based printing service project for the Intuit's flagship product, TurboTax.
+
+Although his formal job description was senior quality engineer, in reality he was developing software, just like any other member of our agile team.
+
+I felt always comfortable discussing design and implementation ideas with him as I trusted his experience and sound common sense.
+He was more than welcome to run his ideas through me as he always strived to achieve the quickest, technically sound and most pragmatic solution for the situation; not necessarily to jump onto the first thing that comes to mind.
+
+Based on our collaborative work, my opinion of Carlos is that he is an example of work ethics, programming proficiency and excellent working relations.
+He will be a genuine asset to any software development company in a variety of roles.… more
+
+
+Vikas Bhupalam 
+
+· 1st
+
+Engineering Leader
+
+November 17, 2009, Vikas worked with Carlos on the same team
+
+All LinkedIn members
+
+On
+
+Carlos is a highly talented  & methodical software engineer.
+He was highly instrumental is releasing high quality of product out of the door for FPS service of launchpad. I would recommend him to work for any software product which desires high quality
+
+
+Michael Harrelson
+
+· 1st
+
+Senior Software Engineer
+
+November 15, 2009, Michael worked with Carlos on the same team
+
+All LinkedIn members
+
+On
+
+Carlos is a very bright and talented software engineer with great programming skills and a good feel for product development. His breadth of knowledge in many different technologies is very impressive.  Carlos is very dedicated and always willing to help and work with other engineers. I would work with Carlos again anytime.
+
+
+Gene Sotto
+
+· 1st
+
+Senior Software Engineer at IFX Online
+
+November 13, 2009, Gene worked with Carlos on the same team
+
+All LinkedIn members
+
+On
+
+Carlos is a very knowledgeable software engineer; an incredible resource in understanding the intricacies of our development framework.

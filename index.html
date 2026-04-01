@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carlos Mariscal | Senior Backend Engineer</title>
-  <meta
-    name="description"
-    content="Carlos Mariscal - Senior Backend Engineer specializing in distributed systems, cloud architecture, and AI-powered platforms."
-  />
+  <title>Carlos Mariscal | Staff Software Engineer</title>
+  <meta name="description" content="Carlos Mariscal — Staff Software Engineer with 20+ years building scalable distributed systems, cloud architecture, and AI-powered platforms. AWS certified. Architecture leader." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #0b1120;
@@ -17,459 +17,961 @@
       --muted: #94a3b8;
       --accent: #38bdf8;
       --accent-2: #22c55e;
+      --accent-gold: #f59e0b;
       --border: rgba(148, 163, 184, 0.18);
       --max-width: 1100px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
-      margin: 0;
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background:
-        radial-gradient(circle at top, rgba(56, 189, 248, 0.12), transparent 30%),
-        linear-gradient(180deg, #0b1120 0%, #0f172a 100%);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(180deg, #0b1120 0%, #0f172a 100%);
       color: var(--text);
       line-height: 1.6;
     }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
     .container {
       width: min(var(--max-width), calc(100% - 40px));
       margin: 0 auto;
     }
 
+    /* ── NAV ── */
     .nav {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      backdrop-filter: blur(10px);
-      background: rgba(11, 17, 32, 0.78);
+      position: sticky; top: 0; z-index: 100;
+      backdrop-filter: blur(12px);
+      background: rgba(11, 17, 32, 0.82);
       border-bottom: 1px solid var(--border);
     }
-
     .nav-inner {
       width: min(var(--max-width), calc(100% - 40px));
       margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 0;
-      gap: 16px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 0; gap: 16px;
     }
+    .brand { font-weight: 800; letter-spacing: 0.2px; color: #fff; font-size: 1.05rem; }
+    .nav-links { display: flex; gap: 18px; flex-wrap: wrap; }
+    .nav-links a { color: var(--muted); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; text-decoration: none; }
 
-    .brand {
-      font-weight: 700;
-      letter-spacing: 0.2px;
-      color: #fff;
+    /* ── HERO ── */
+    .hero { padding: 80px 0 50px; position: relative; }
+    .hero::before {
+      content: ''; position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
+      width: 800px; height: 600px;
+      background: radial-gradient(circle, rgba(56,189,248,0.1) 0%, transparent 70%);
+      pointer-events: none;
     }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .nav-links a:hover {
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    .hero {
-      padding: 88px 0 56px;
-    }
-
     .eyebrow {
-      display: inline-block;
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 0.92rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 18px;
+      display: inline-block; color: var(--accent); font-weight: 700;
+      font-size: 0.88rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;
     }
-
     h1 {
-      margin: 0;
-      font-size: clamp(2.6rem, 7vw, 5rem);
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      color: #ffffff;
-      max-width: 900px;
+      font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.08;
+      letter-spacing: -0.03em; color: #fff; max-width: 860px; font-weight: 900;
     }
-
     .subtitle {
-      margin-top: 20px;
-      font-size: clamp(1.05rem, 2.1vw, 1.35rem);
-      color: var(--muted);
-      max-width: 780px;
+      margin-top: 18px; font-size: clamp(1.02rem, 2vw, 1.25rem);
+      color: var(--muted); max-width: 740px; line-height: 1.7;
     }
+    .hero-actions { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
 
-    .hero-actions {
-      margin-top: 32px;
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 11px 20px; border-radius: 999px; font-weight: 600; font-size: 0.92rem;
+      border: 1px solid transparent; transition: all 0.2s; text-decoration: none; cursor: pointer;
     }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 18px;
-      border-radius: 999px;
-      font-weight: 600;
-      border: 1px solid transparent;
-      transition: 0.2s ease;
-      text-decoration: none;
-    }
-
-    .button:hover {
-      text-decoration: none;
-      transform: translateY(-1px);
-    }
-
-    .button-primary {
-      background: var(--accent);
-      color: #082f49;
-    }
-
-    .button-primary:hover {
-      background: #67d3fb;
-    }
-
-    .button-secondary {
-      background: transparent;
-      color: var(--text);
-      border-color: var(--border);
-    }
-
-    .button-secondary:hover {
-      border-color: rgba(56, 189, 248, 0.45);
-      color: #fff;
-    }
+    .btn:hover { text-decoration: none; transform: translateY(-1px); }
+    .btn-primary { background: var(--accent); color: #082f49; }
+    .btn-primary:hover { background: #67d3fb; }
+    .btn-ghost { background: transparent; color: var(--text); border-color: var(--border); }
+    .btn-ghost:hover { border-color: rgba(56,189,248,0.45); color: #fff; }
 
     .highlights {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 46px;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 40px;
     }
-
-    .highlight {
-      background: rgba(17, 24, 39, 0.7);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 20px;
+    .hl {
+      background: rgba(17,24,39,0.7); border: 1px solid var(--border);
+      border-radius: 16px; padding: 20px;
     }
+    .hl .metric { display: block; font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 4px; }
+    .hl .label { color: var(--muted); font-size: 0.9rem; line-height: 1.45; }
 
-    .highlight .metric {
-      display: block;
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 6px;
-    }
-
-    .highlight .label {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    section {
-      padding: 26px 0 18px;
-    }
-
+    /* ── SECTIONS ── */
+    section { padding: 52px 0 20px; }
     .section-title {
-      font-size: 1.9rem;
-      margin: 0 0 8px;
-      color: #fff;
+      font-size: 1.7rem; color: #fff; font-weight: 800; margin-bottom: 6px;
+      letter-spacing: -0.01em;
     }
+    .section-intro { color: var(--muted); max-width: 720px; margin-bottom: 28px; }
 
-    .section-intro {
-      margin: 0 0 24px;
-      color: var(--muted);
-      max-width: 760px;
-    }
-
+    /* ── ABOUT ── */
     .about-panel {
-      background: rgba(17, 24, 39, 0.75);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 28px;
+      background: rgba(17,24,39,0.75); border: 1px solid var(--border);
+      border-radius: 20px; padding: 28px; line-height: 1.75; color: var(--text);
     }
-
-    .cards {
-      display: grid;
-      gap: 18px;
-    }
-
-    .card {
-      background: linear-gradient(180deg, rgba(23, 32, 51, 0.95), rgba(17, 24, 39, 0.95));
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 24px;
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      color: #fff;
-      font-size: 1.2rem;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .tag-row {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 16px;
-    }
-
+    .tag-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; }
     .tag {
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      background: rgba(56, 189, 248, 0.08);
-      color: #cbeffd;
-      border-radius: 999px;
-      padding: 6px 10px;
-      font-size: 0.86rem;
+      border: 1px solid rgba(56,189,248,0.25); background: rgba(56,189,248,0.08);
+      color: #cbeffd; border-radius: 999px; padding: 5px 12px; font-size: 0.82rem; font-weight: 500;
     }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+    /* ── CERTIFICATIONS ── */
+    .cert-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .cert-card {
+      background: linear-gradient(135deg, rgba(17,24,39,0.85), rgba(23,32,51,0.95));
+      border: 1px solid var(--border); border-radius: 20px; padding: 32px;
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      position: relative; overflow: hidden;
+    }
+    .cert-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, #2563eb, #38bdf8, #2563eb);
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .cert-card:hover {
+      border-color: rgba(37,99,235,0.5); transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(37,99,235,0.15);
+    }
+    .cert-card:hover::before { opacity: 1; }
+    .cert-badge-img {
+      width: 140px; height: 140px; margin-bottom: 20px;
+      filter: drop-shadow(0 4px 16px rgba(37,99,235,0.3));
+      transition: transform 0.3s;
+    }
+    .cert-card:hover .cert-badge-img { transform: scale(1.05); }
+    .cert-info { display: flex; flex-direction: column; align-items: center; }
+    .cert-info h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+    .cert-info p { color: var(--muted); font-size: 0.88rem; margin: 0; max-width: 340px; line-height: 1.55; }
+    .cert-year {
+      display: inline-block; margin-top: 14px;
+      font-size: 0.8rem; font-weight: 600; color: #60a5fa;
+      border: 1px solid rgba(37,99,235,0.3); background: rgba(37,99,235,0.1);
+      border-radius: 999px; padding: 4px 14px;
     }
 
+    /* ── TESTIMONIALS ── */
+    .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .testimonial {
+      background: rgba(17,24,39,0.75); border: 1px solid var(--border);
+      border-radius: 18px; padding: 26px; position: relative;
+      transition: border-color 0.3s;
+    }
+    .testimonial:hover { border-color: rgba(56,189,248,0.3); }
+    .testimonial::before {
+      content: '\201C'; position: absolute; top: 16px; left: 22px;
+      font-size: 3.2rem; line-height: 1; color: rgba(56,189,248,0.15);
+      font-family: Georgia, serif;
+    }
+    .testimonial blockquote {
+      margin: 0; padding: 0; font-size: 0.9rem; color: var(--text);
+      line-height: 1.7; font-style: italic;
+    }
+    .testimonial-author { margin-top: 16px; display: flex; flex-direction: column; gap: 2px; }
+    .testimonial-name { font-weight: 700; color: #fff; font-size: 0.9rem; }
+    .testimonial-role { color: var(--muted); font-size: 0.8rem; }
+    .testimonial.featured {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, rgba(17,24,39,0.8), rgba(23,32,51,0.9));
+      border-color: rgba(56,189,248,0.2);
+    }
+    .testimonial.featured blockquote { font-size: 1.02rem; max-width: 820px; }
+
+    /* ── CASE STUDIES ── */
+    .case-studies { display: grid; gap: 20px; }
+    .case-card {
+      background: linear-gradient(180deg, rgba(23,32,51,0.95), rgba(17,24,39,0.95));
+      border: 1px solid var(--border); border-radius: 20px; overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .case-card:hover { border-color: rgba(56,189,248,0.3); }
+    .case-header {
+      padding: 24px 28px; cursor: pointer; display: flex;
+      justify-content: space-between; align-items: flex-start; gap: 16px;
+    }
+    .case-header h3 { color: #fff; font-size: 1.15rem; font-weight: 700; margin-bottom: 6px; }
+    .case-header p { color: var(--muted); font-size: 0.92rem; margin: 0; }
+    .case-company {
+      display: inline-block; font-size: 0.78rem; font-weight: 600; color: var(--accent);
+      margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    .case-toggle {
+      flex-shrink: 0; width: 32px; height: 32px; border-radius: 8px;
+      background: rgba(56,189,248,0.1); border: 1px solid rgba(56,189,248,0.2);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent); font-size: 1.2rem; transition: all 0.2s;
+    }
+    .case-detail {
+      max-height: 0; overflow: hidden; transition: max-height 0.4s ease;
+    }
+    .case-detail.open { max-height: 4000px; }
+    .case-detail-inner {
+      padding: 0 28px 28px; border-top: 1px solid var(--border);
+    }
+    .case-detail-inner h4 {
+      color: #fff; font-size: 0.95rem; font-weight: 700; margin: 20px 0 8px;
+      text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .case-detail-inner p, .case-detail-inner li {
+      color: var(--muted); font-size: 0.92rem; line-height: 1.7;
+    }
+    .case-detail-inner ul { padding-left: 20px; margin: 8px 0; }
+    .case-detail-inner li { margin-bottom: 4px; }
+    .case-outcomes {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px; margin-top: 16px;
+    }
+    .outcome {
+      background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.15);
+      border-radius: 12px; padding: 14px;
+    }
+    .outcome .val { display: block; font-size: 1.3rem; font-weight: 800; color: #fff; }
+    .outcome .desc { color: var(--muted); font-size: 0.82rem; line-height: 1.4; }
+    .arch-img {
+      margin: 16px 0; border-radius: 12px; overflow: hidden;
+      border: 1px solid var(--border); background: #fff;
+    }
+    .arch-img img { width: 100%; display: block; }
+    .arch-caption {
+      font-size: 0.8rem; color: var(--muted); text-align: center;
+      padding: 8px; background: rgba(17,24,39,0.8);
+    }
+
+    /* ── SKILLS ── */
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;
+    }
+    .skill-group {
+      background: rgba(17,24,39,0.75); border: 1px solid var(--border);
+      border-radius: 16px; padding: 22px;
+    }
+    .skill-group h3 {
+      color: #fff; font-size: 0.92rem; font-weight: 700; margin-bottom: 12px;
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .skill-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .skill-tag {
+      background: rgba(148,163,184,0.08); border: 1px solid rgba(148,163,184,0.15);
+      color: var(--text); border-radius: 8px; padding: 5px 10px; font-size: 0.82rem;
+    }
+
+    /* ── TIMELINE ── */
+    .timeline { position: relative; padding-left: 28px; }
+    .timeline::before {
+      content: ''; position: absolute; left: 8px; top: 0; bottom: 0;
+      width: 2px; background: var(--border);
+    }
+    .tl-item { position: relative; margin-bottom: 32px; }
+    .tl-item:last-child { margin-bottom: 0; }
+    .tl-dot {
+      position: absolute; left: -24px; top: 6px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--accent); border: 2px solid var(--bg);
+    }
+    .tl-item.military .tl-dot { background: var(--accent-2); }
+    .tl-date {
+      font-size: 0.82rem; font-weight: 600; color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .tl-item.military .tl-date { color: var(--accent-2); }
+    .tl-title { color: #fff; font-weight: 700; font-size: 1.05rem; }
+    .tl-company { color: var(--muted); font-size: 0.92rem; }
+    .tl-desc { color: var(--muted); font-size: 0.88rem; margin-top: 6px; max-width: 600px; }
+
+    /* ── EDUCATION / MILITARY ── */
+    .edu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .edu-card {
+      background: rgba(17,24,39,0.75); border: 1px solid var(--border);
+      border-radius: 18px; padding: 24px;
+    }
+    .edu-card h3 { color: #fff; font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+    .edu-card .edu-sub { color: var(--accent); font-size: 0.88rem; font-weight: 600; margin-bottom: 10px; }
+    .edu-card p { color: var(--muted); font-size: 0.9rem; margin: 0; }
+    .edu-card.military { border-color: rgba(34,197,94,0.2); }
+    .edu-card.military h3 { color: #fff; }
+    .edu-card.military .edu-sub { color: var(--accent-2); }
+    .award-badge {
+      display: inline-block; margin-top: 10px;
+      font-size: 0.78rem; font-weight: 600; color: var(--accent-2);
+      border: 1px solid rgba(34,197,94,0.3); background: rgba(34,197,94,0.08);
+      border-radius: 999px; padding: 3px 10px;
+    }
+
+    /* ── CONTACT / LINKS ── */
+    .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
     .contact-card {
-      background: rgba(17, 24, 39, 0.75);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 20px;
+      background: rgba(17,24,39,0.75); border: 1px solid var(--border);
+      border-radius: 16px; padding: 20px; transition: border-color 0.2s;
     }
-
+    .contact-card:hover { border-color: rgba(56,189,248,0.3); }
     .contact-label {
-      display: block;
-      font-size: 0.86rem;
-      color: var(--muted);
-      margin-bottom: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
+      display: block; font-size: 0.78rem; color: var(--muted); margin-bottom: 6px;
+      text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;
     }
+    .contact-card a { font-weight: 500; }
 
-    footer {
-      padding: 42px 0 56px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
+    /* ── FOOTER ── */
+    footer { padding: 40px 0 50px; color: var(--muted); font-size: 0.9rem; }
 
+    /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      .highlights,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-inner {
-        align-items: flex-start;
-        flex-direction: column;
-      }
+      .highlights, .contact-grid { grid-template-columns: 1fr; }
+      .cert-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .testimonial.featured { grid-column: auto; }
+      .edu-grid { grid-template-columns: 1fr; }
+      .nav-inner { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 600px) {
+      .skills-grid { grid-template-columns: 1fr; }
+      .case-outcomes { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
+
+  <!-- ════ NAVIGATION ════ -->
   <header class="nav">
     <div class="nav-inner">
       <div class="brand">Carlos Mariscal</div>
       <nav class="nav-links">
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#links">Links</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#work">Case Studies</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
+
+    <!-- ════ HERO ════ -->
     <section class="hero">
-      <div class="eyebrow">Senior Backend Engineer</div>
-      <h1>Building scalable distributed systems, cloud platforms, and practical AI solutions.</h1>
+      <div class="eyebrow">Staff Software Engineer</div>
+      <h1>Architecture leadership, distributed systems, and AI&#8209;powered platforms at scale.</h1>
       <p class="subtitle">
-        I design and deliver resilient backend systems with a focus on reliability, performance,
-        operational simplicity, and measurable business impact.
+        20+ years designing and building scalable, resilient backend systems in cloud environments.
+        I lead complex cloud migrations, architect event-driven platforms, and mentor engineering
+        teams to deliver measurable business impact.
       </p>
 
       <div class="hero-actions">
-        <a class="button button-primary" href="#projects">View Projects</a>
-        <a class="button button-secondary" href="mailto:carlosmariscal619@gmail.com">Contact Me</a>
-        <a class="button button-secondary" href="/resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+        <a class="btn btn-primary" href="#work">View Case Studies</a>
+        <a class="btn btn-ghost" href="mailto:carlosmariscal619@gmail.com">Contact Me</a>
+        <a class="btn btn-ghost" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       </div>
 
       <div class="highlights">
-        <div class="highlight">
+        <div class="hl">
           <span class="metric">220+</span>
-          <span class="label">Support channels served by an AI assistant deployment</span>
+          <span class="label">Support channels served by an AI assistant I designed and deployed</span>
         </div>
-        <div class="highlight">
+        <div class="hl">
           <span class="metric">130M+</span>
-          <span class="label">Customer records processed in sanctions screening architecture</span>
+          <span class="label">Customer records processed in sanctions screening architecture I led</span>
         </div>
-        <div class="highlight">
+        <div class="hl">
           <span class="metric">26,000+</span>
-          <span class="label">Structured review artifacts generated in an AI pipeline</span>
+          <span class="label">Structured review artifacts generated in an AI pipeline I built</span>
         </div>
       </div>
     </section>
 
+    <!-- ════ ABOUT ════ -->
     <section id="about">
       <h2 class="section-title">About</h2>
       <p class="section-intro">
-        I’m a backend and platform engineer with deep experience building cloud-native systems,
-        modernizing legacy services, and using AI to solve real operational problems. My work spans
-        distributed systems, event-driven architectures, microservices, and engineering leadership.
+        Backend and platform engineer with deep experience building cloud-native systems,
+        modernizing legacy services, and applying AI to solve real operational problems.
       </p>
       <div class="about-panel">
-        I’ve led and delivered systems across support automation, compliance platforms, subscription
-        services, and internal AI tooling. I’m especially interested in roles where strong technical
-        execution, architecture, and pragmatic leadership all matter.
+        <p>
+          I've led and delivered systems across support automation, compliance platforms, subscription
+          services, AI tooling, and defense applications. My work spans distributed systems, event-driven
+          architectures, microservices, and engineering leadership. I'm especially drawn to roles where
+          strong technical execution, architecture ownership, and pragmatic mentorship all matter.
+        </p>
+        <p style="margin-top:12px;">
+          With 20+ years spanning enterprise (Intuit, Zoox), defense (DoD satellite systems, naval
+          battlefield simulators), and SaaS (GIS platforms), I bring a rare combination of deep
+          hands-on implementation skill and the ability to lead architecture decisions across
+          large organizations.
+        </p>
         <div class="tag-row">
           <span class="tag">Java</span>
           <span class="tag">Spring Boot</span>
           <span class="tag">Python</span>
+          <span class="tag">Go</span>
           <span class="tag">AWS</span>
           <span class="tag">Distributed Systems</span>
           <span class="tag">AI / LLMs</span>
           <span class="tag">Kafka</span>
           <span class="tag">Kubernetes</span>
+          <span class="tag">Event-Driven Architecture</span>
+          <span class="tag">Microservices</span>
+          <span class="tag">Team Leadership</span>
         </div>
       </div>
     </section>
 
-    <section id="projects">
-      <h2 class="section-title">Selected Work</h2>
+    <!-- ════ CERTIFICATIONS ════ -->
+    <section id="certifications">
+      <h2 class="section-title">AWS Certifications</h2>
       <p class="section-intro">
-        A few examples of systems I’ve built or led that delivered meaningful scale, reliability, and business value.
+        Validated cloud architecture and development expertise through AWS certification.
       </p>
-
-      <div class="cards">
-        <article class="card">
-          <h3>AI Support Assistant — Intuit</h3>
-          <p>
-            Built a Slack-based AI assistant using OpenAI, RAG, Slack APIs, Jira APIs, and indexed internal
-            knowledge sources. The system supported more than 220 channels, handled roughly 85% of support
-            message traffic, and helped reduce support volume by about 27%.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Sanctions Screening Platform Migration</h3>
-          <p>
-            Led architecture and implementation for the migration from Amber Road to LexisNexis, including
-            backend services and cloud infrastructure. The resulting platform supported daily screenings,
-            audit workflows, and batch processing at scale across 130M+ Credit Karma records and 14M+ Mailchimp records.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>AI Performance Review Assistant — Zoox</h3>
-          <p>
-            Designed and optimized an AI-assisted review pipeline that generated more than 26,000 structured
-            review artifacts for 2,800+ employees. Improved throughput with parallelism and batching, while reducing
-            AI costs significantly through caching and resilience patterns.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Subscription & Catalog Modernization</h3>
-          <p>
-            Led modernization efforts from legacy integrations to Spring Boot microservices in AWS, improved
-            maintainability and performance of high-traffic APIs, and introduced idempotent event-driven designs
-            to reduce production issues in critical signup flows.
-          </p>
-        </article>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <img class="cert-badge-img" src="images/aws-certified-solutions-architect-associate.png" alt="AWS Certified Solutions Architect Associate Badge" />
+          <div class="cert-info">
+            <h3>AWS Certified Solutions Architect</h3>
+            <p>Designing distributed systems, selecting appropriate AWS services, and architecting resilient, cost-optimized cloud solutions.</p>
+            <span class="cert-year">Associate &middot; Certified 2025</span>
+          </div>
+        </div>
+        <div class="cert-card">
+          <img class="cert-badge-img" src="images/aws-certified-developer-associate.png" alt="AWS Certified Developer Associate Badge" />
+          <div class="cert-info">
+            <h3>AWS Certified Developer</h3>
+            <p>Developing, deploying, and debugging cloud-based applications using AWS services, SDKs, and CI/CD best practices.</p>
+            <span class="cert-year">Associate &middot; Certified 2026</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="links">
-      <h2 class="section-title">Links</h2>
+    <!-- ════ TESTIMONIALS ════ -->
+    <section id="testimonials">
+      <h2 class="section-title">What Colleagues Say</h2>
       <p class="section-intro">
-        You can find my professional profiles and resume here.
+        Recommendations from engineers, managers, and leaders I've worked with.
+      </p>
+      <div class="testimonials-grid">
+
+        <div class="testimonial featured">
+          <blockquote>
+            "What stands out most about Carlos is his approach to engineering &mdash; he never just dives into the code. He takes the time to deeply understand the problem first, which reflects in the quality of his design and architecture work. He has a remarkable ability to take large, complex challenges and break them down into clear, actionable steps."
+          </blockquote>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Maria Goretti Rivera</span>
+            <span class="testimonial-role">Application Engineer, Zoox</span>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <blockquote>
+            "He created a tool that automated support across more than 220 channels &mdash; a game-changer, handling 85% of support message traffic and reducing support volume by 27%. Carlos is a natural leader who consistently elevates the quality of work around him."
+          </blockquote>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Gurveer Khakh</span>
+            <span class="testimonial-role">Software Engineer, Intuit &middot; 3+ years together</span>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <blockquote>
+            "Carlos played a key role in refactoring legacy systems into scalable, modern architectures. He introduced performance optimizations across the oBill and Sanctions Screening platforms, many of which resulted in measurable revenue gains."
+          </blockquote>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Raul I. Garcia</span>
+            <span class="testimonial-role">Sr. Staff Software Engineer, eHealth &middot; 7 years together at Intuit</span>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <blockquote>
+            "Carlos led the migration from on-premise to the cloud, transitioning legacy Mule services to modern Spring Boot microservices. He designed an event-driven architecture to tackle challenging idempotency issues &mdash; a critical advancement for the platform's reliability."
+          </blockquote>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Tanvi Panchal</span>
+            <span class="testimonial-role">Software Dev Manager, Ingram Micro &middot; 6 years together at Intuit</span>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <blockquote>
+            "Carlos's leadership style stood out as exceptional &mdash; he encouraged me to explore new ideas, provided opportunities for growth, and helped me learn valuable lessons from mistakes without fear of judgment. His guidance had a lasting impact on my career."
+          </blockquote>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Kittinan Ponkaew</span>
+            <span class="testimonial-role">Software Engineer, Intuit &middot; 4 years together</span>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <blockquote>
+            "He started making significant contributions within a week and within a month he was already leading a project with accolades from everyone he interacted with. He is the kind of person who makes the Manager's job easy because there is no need to manage him."
+          </blockquote>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Rao Madhavrao</span>
+            <span class="testimonial-role">Senior Director Bioinformatics &middot; Former Manager</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════ CASE STUDIES ════ -->
+    <section id="work">
+      <h2 class="section-title">Selected Work</h2>
+      <p class="section-intro">
+        Systems I've architected and led that delivered meaningful scale, reliability, and business value.
+        Click any card to view the architecture and details.
       </p>
 
+      <div class="case-studies">
+
+        <!-- Case 1: AIDA -->
+        <article class="case-card">
+          <div class="case-header" onclick="toggleCase(this)">
+            <div>
+              <span class="case-company">Intuit &middot; 2023–2025</span>
+              <h3>AI Support Assistant (AIDA)</h3>
+              <p>Slack-based AI assistant using OpenAI, RAG, and internal knowledge sources that automated support across 220+ channels and reduced support volume by 27%.</p>
+            </div>
+            <div class="case-toggle">+</div>
+          </div>
+          <div class="case-detail">
+            <div class="case-detail-inner">
+              <h4>Problem</h4>
+              <p>Intuit's internal developer support operated across hundreds of Slack channels with high message volume. Support engineers were overwhelmed by repetitive questions, lacked visibility into support trends, and had no automated way to triage or respond to common inquiries.</p>
+
+              <h4>Architecture</h4>
+              <ul>
+                <li><strong>Slack App (Lambda + Go):</strong> Receives event messages, routes through the AIDA pipeline, updates threads with AI responses</li>
+                <li><strong>AIDA Service (Java, Spring Boot, K8s):</strong> Core orchestration — manages conversation history, creates Jira tickets, triggers batch jobs, publishes metrics, integrates with OpenAI and Glean RAG</li>
+                <li><strong>Support Eco Service (Go, Lambda):</strong> Generates StackOverflow-style Q&A from support interactions</li>
+                <li><strong>Insights Pipeline (Python, Lambda, SQS, DynamoDB):</strong> Clusters support threads to surface doc gaps, enhancement opportunities, and training recommendations via specialized prompts</li>
+                <li><strong>Metrics Dashboard (Java, Spring Boot, DynamoDB):</strong> Tracks escalation rates, bot accuracy, and support volumes</li>
+                <li><strong>Retry Architecture:</strong> Dedicated retry service and events queue for transient failure handling</li>
+              </ul>
+              <div class="arch-img">
+                <img src="images/aida-service-architecture.png" alt="AIDA Service Architecture Diagram" loading="lazy" />
+                <div class="arch-caption">AIDA Service Architecture — Multi-service AI support platform</div>
+              </div>
+
+              <h4>Outcomes</h4>
+              <div class="case-outcomes">
+                <div class="outcome"><span class="val">220+</span><span class="desc">Support channels served</span></div>
+                <div class="outcome"><span class="val">85%</span><span class="desc">Message traffic handled automatically</span></div>
+                <div class="outcome"><span class="val">27%</span><span class="desc">Reduction in support volume</span></div>
+              </div>
+
+              <div class="tag-row" style="margin-top:20px;">
+                <span class="tag">Python</span><span class="tag">Java</span><span class="tag">Spring Boot</span>
+                <span class="tag">Go</span><span class="tag">AWS Lambda</span><span class="tag">DynamoDB</span>
+                <span class="tag">SQS</span><span class="tag">Kubernetes</span><span class="tag">OpenAI</span>
+                <span class="tag">Glean RAG</span><span class="tag">Slack API</span><span class="tag">Jira API</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 2: Sanctions -->
+        <article class="case-card">
+          <div class="case-header" onclick="toggleCase(this)">
+            <div>
+              <span class="case-company">Intuit &middot; 2021–2023</span>
+              <h3>Sanctions Screening Platform Migration</h3>
+              <p>Led architecture and implementation for migration from Amber Road to LexisNexis — enabling compliant screening of 130M+ Credit Karma and 14M+ Mailchimp records.</p>
+            </div>
+            <div class="case-toggle">+</div>
+          </div>
+          <div class="case-detail">
+            <div class="case-detail-inner">
+              <h4>Problem</h4>
+              <p>Intuit needed to migrate its sanctions screening service after acquiring Credit Karma (130M+ users) and Mailchimp (14M+ users). The legacy Amber Road platform lacked reporting, batch screening, and audit capabilities needed for enterprise-scale regulatory compliance.</p>
+
+              <h4>Architecture</h4>
+              <ul>
+                <li><strong>Real-Time Screening API:</strong> Receives ScreenPartyRequest from product offerings, calls Bridger/LexisNexis, publishes results to Kafka ScreeningEventTopic</li>
+                <li><strong>Batch Processing Pipeline:</strong> Multi-stage system — Batch Creation Processor, Persistent Batch Creation, SFTP Processor for S3 uploads, Batch Results Processor for completed screenings</li>
+                <li><strong>Kafka Event Architecture:</strong> Multiple topics (SanctionScreeningTopic, SanctionScreeningEnvelopeTopic, ScreeningEventTopic) with dedicated consumers for Data Feeding, Event Processing, Alert Status, and Screening Status</li>
+                <li><strong>Audit Data Warehouse:</strong> Stores Screening History, Contact History, Decision History, and Alert History for regulatory compliance</li>
+                <li><strong>Data Migration:</strong> Built migration path from Amber Road database preserving historical data</li>
+                <li><strong>Resilience:</strong> API retry for Bridger unavailability, Screening Event retry with exhaustion handling, error storage in Data Feeder Errors</li>
+              </ul>
+              <div class="arch-img">
+                <img src="images/sanctions-architecture.png" alt="Sanctions Screening Architecture Diagram" loading="lazy" />
+                <div class="arch-caption">Sanctions Screening Architecture — Event-driven compliance platform with Kafka, batch processing, and audit warehouse</div>
+              </div>
+
+              <h4>Outcomes</h4>
+              <div class="case-outcomes">
+                <div class="outcome"><span class="val">130M+</span><span class="desc">Credit Karma records screened</span></div>
+                <div class="outcome"><span class="val">14M+</span><span class="desc">Mailchimp records screened</span></div>
+                <div class="outcome"><span class="val">Full</span><span class="desc">Reporting, batch, & audit capabilities delivered</span></div>
+              </div>
+
+              <div class="tag-row" style="margin-top:20px;">
+                <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Kafka</span>
+                <span class="tag">AWS EC2</span><span class="tag">RDS</span><span class="tag">S3</span>
+                <span class="tag">OpenSearch</span><span class="tag">Kubernetes</span><span class="tag">ArgoCD</span>
+                <span class="tag">LexisNexis API</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 3: Zoox -->
+        <article class="case-card">
+          <div class="case-header" onclick="toggleCase(this)">
+            <div>
+              <span class="case-company">Zoox &middot; 2025–Present</span>
+              <h3>AI Performance Review Assistant</h3>
+              <p>Designed an AI pipeline that generated 26,000+ structured review artifacts for 2,800+ employees, saving ~1,400 manager hours per cycle and reducing AI costs by 60–80%.</p>
+            </div>
+            <div class="case-toggle">+</div>
+          </div>
+          <div class="case-detail">
+            <div class="case-detail-inner">
+              <h4>Problem</h4>
+              <p>Zoox's biannual performance review process for 2,800+ employees required extensive manual effort from managers — collecting feedback, analyzing performance data, and writing structured reviews. The process consumed thousands of manager hours and lacked consistency.</p>
+
+              <h4>Architecture</h4>
+              <ul>
+                <li><strong>Automated Feedback Collection:</strong> System aggregates performance data, peer feedback, and self-assessments for each employee</li>
+                <li><strong>AI-Powered Analysis:</strong> LLM-based processing generates structured review artifacts ensuring consistency and completeness</li>
+                <li><strong>Parallelism & Batching:</strong> Cut end-to-end runtime substantially by introducing parallel processing and intelligent batching to eliminate bottlenecks</li>
+                <li><strong>Intelligent Caching:</strong> Reduced AI API costs by 60–80% through caching strategies that avoid redundant LLM calls</li>
+                <li><strong>Automated Access Control:</strong> Role-based access for generated artifacts, ensuring HR data sensitivity compliance</li>
+              </ul>
+
+              <h4>Outcomes</h4>
+              <div class="case-outcomes">
+                <div class="outcome"><span class="val">26,000+</span><span class="desc">Structured review artifacts generated</span></div>
+                <div class="outcome"><span class="val">2,800+</span><span class="desc">Employees covered</span></div>
+                <div class="outcome"><span class="val">~1,400 hrs</span><span class="desc">Manager hours saved per cycle</span></div>
+                <div class="outcome"><span class="val">60–80%</span><span class="desc">AI cost reduction via caching</span></div>
+              </div>
+
+              <div class="tag-row" style="margin-top:20px;">
+                <span class="tag">Python</span><span class="tag">OpenAI API</span>
+                <span class="tag">Prompt Engineering</span><span class="tag">Cursor + Claude</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 4: Idempotency -->
+        <article class="case-card">
+          <div class="case-header" onclick="toggleCase(this)">
+            <div>
+              <span class="case-company">Intuit &middot; 2019–2021</span>
+              <h3>Subscription Signup Idempotency Platform</h3>
+              <p>Designed an event-driven idempotency solution with 7+ async consumers, tracking UI with replay capability, eliminating critical duplicate subscription bugs in QBO.</p>
+            </div>
+            <div class="case-toggle">+</div>
+          </div>
+          <div class="case-detail">
+            <div class="case-detail-inner">
+              <h4>Problem</h4>
+              <p>The Online Billing Platform suffered from critical production bugs: concurrent signup requests created multiple subscriptions, customer grants were inactivated on second-request failures, failure events published with incorrect correlation IDs, and poison messages went unprocessed. These directly impacted QuickBooks Online subscription success rates.</p>
+
+              <h4>Architecture</h4>
+              <ul>
+                <li><strong>Idempotency Check (DocumentDB):</strong> Signup Consumer upserts a SubscriptionSignupDocument keyed by webs_request_id. Sequence number determines new vs. retry vs. duplicate request</li>
+                <li><strong>7+ Async Consumers:</strong> Signup, Process Subscription, Subscription Caching, Event Publisher, Failure Event, Transaction History, and Signup Retry consumers — each publishing typed events to a SubscriptionSignupEvent queue</li>
+                <li><strong>Event Sourcing:</strong> Every lifecycle event recorded in the document, creating a complete audit trail per signup request</li>
+                <li><strong>Automatic Replay:</strong> When a request fails and a STANDBY duplicate exists, the system automatically replays the next queued request</li>
+                <li><strong>Tracking UI & API:</strong> Front-end for PDs and L1/L2 Support to view signup events and replay failed transactions</li>
+                <li><strong>Poison Message Handling:</strong> Retry consumer with configurable exhaustion — exhausted messages surfaced in tracking UI for manual intervention</li>
+              </ul>
+              <div class="arch-img">
+                <img src="images/signup-architecture.png" alt="Signup Async Data Flow Diagram" loading="lazy" />
+                <div class="arch-caption">Signup Async Data Flow — Event-driven subscription signup orchestration</div>
+              </div>
+              <div class="arch-img">
+                <img src="images/signup-idempotency-architecture.png" alt="Idempotency Data Flow Diagram" loading="lazy" />
+                <div class="arch-caption">Idempotency Data Flow — Duplicate detection, replay, and event tracking</div>
+              </div>
+
+              <h4>Outcomes</h4>
+              <div class="case-outcomes">
+                <div class="outcome"><span class="val">Eliminated</span><span class="desc">Duplicate subscription creation bugs</span></div>
+                <div class="outcome"><span class="val">Real-time</span><span class="desc">Signup lifecycle visibility via tracking UI</span></div>
+                <div class="outcome"><span class="val">Automated</span><span class="desc">Failed transaction replay</span></div>
+                <div class="outcome"><span class="val">5 engineers</span><span class="desc">Mentored in design patterns & distributed systems</span></div>
+              </div>
+
+              <div class="tag-row" style="margin-top:20px;">
+                <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">DocumentDB</span>
+                <span class="tag">ActiveMQ</span><span class="tag">Redis</span><span class="tag">Aurora</span>
+                <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">ArgoCD</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 5: Catalog -->
+        <article class="case-card">
+          <div class="case-header" onclick="toggleCase(this)">
+            <div>
+              <span class="case-company">Intuit &middot; 2017–2019</span>
+              <h3>Private Catalog Offers Refactoring & Migration</h3>
+              <p>Refactored a 1,381-line monolithic service using SOLID principles, achieving 60% performance gains and 90% faster response times with Redis caching.</p>
+            </div>
+            <div class="case-toggle">+</div>
+          </div>
+          <div class="case-detail">
+            <div class="case-detail-inner">
+              <h4>Problem</h4>
+              <p>The Private Catalog Offers API was a monolithic 1,381-line service class with severe issues: database transitions called 1,236 times (53.9s for a single query), hundreds of redundant AddOn lookups, production worst-case response of 43,485ms, and 20-minute unit test runs. VisualVM profiling confirmed the bottlenecks.</p>
+
+              <h4>Architecture</h4>
+              <ul>
+                <li><strong>Strategy Pattern:</strong> Replaced monolithic conditionals with dedicated strategy classes — Addition, Migration, Change, and Switch query action strategies</li>
+                <li><strong>Catalog Model Library:</strong> Extracted domain models into a reusable library for cross-service consistency</li>
+                <li><strong>Redis/CouchBase Caching:</strong> AddOn criteria cached to eliminate redundant DB calls. Query criteria cached with scheduled refresh (2h/12h). Cache preloaded on startup.</li>
+                <li><strong>Concurrent Processing:</strong> Parallelized getTransitions and getExtendedAttributes calls instead of sequential execution</li>
+                <li><strong>Early Pagination:</strong> Moved pagination before processing (max 500) instead of after — drastically reduced data processed per request</li>
+                <li><strong>Single Batch Query:</strong> Replaced 1,236 individual transition DB calls with a single batched query</li>
+              </ul>
+
+              <h4>Outcomes</h4>
+              <div class="case-outcomes">
+                <div class="outcome"><span class="val">60%</span><span class="desc">Performance improvement via concurrency</span></div>
+                <div class="outcome"><span class="val">90%</span><span class="desc">Faster responses from Redis caching</span></div>
+                <div class="outcome"><span class="val">1,236→1</span><span class="desc">Transition DB calls reduced to single query</span></div>
+                <div class="outcome"><span class="val">SOLID</span><span class="desc">Strategy pattern decomposition</span></div>
+              </div>
+
+              <div class="tag-row" style="margin-top:20px;">
+                <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Redis</span>
+                <span class="tag">CouchBase</span><span class="tag">AWS</span><span class="tag">Aurora</span>
+                <span class="tag">Quartz</span><span class="tag">VisualVM</span><span class="tag">JPA</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ════ SKILLS ════ -->
+    <section id="skills">
+      <h2 class="section-title">Technical Skills</h2>
+      <p class="section-intro">Core technologies and practices I work with regularly.</p>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Languages & Frameworks</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Java</span><span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">Python</span><span class="skill-tag">Go</span>
+            <span class="skill-tag">TypeScript</span><span class="skill-tag">SQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Cloud & Infrastructure</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS</span><span class="skill-tag">Lambda</span>
+            <span class="skill-tag">S3</span><span class="skill-tag">DynamoDB</span>
+            <span class="skill-tag">Aurora</span><span class="skill-tag">EC2</span>
+            <span class="skill-tag">SQS / SNS</span><span class="skill-tag">CloudFormation</span>
+            <span class="skill-tag">CDK</span><span class="skill-tag">Kubernetes</span>
+            <span class="skill-tag">Docker</span><span class="skill-tag">ArgoCD</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Data & Messaging</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Kafka</span><span class="skill-tag">ActiveMQ</span>
+            <span class="skill-tag">Redis</span><span class="skill-tag">DocumentDB</span>
+            <span class="skill-tag">OpenSearch</span><span class="skill-tag">Oracle</span>
+            <span class="skill-tag">SQL Server</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>AI & APIs</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">OpenAI API</span><span class="skill-tag">Prompt Engineering</span>
+            <span class="skill-tag">RAG</span><span class="skill-tag">Glean</span>
+            <span class="skill-tag">REST</span><span class="skill-tag">GraphQL</span>
+            <span class="skill-tag">SOAP</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Architecture & Patterns</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Distributed Systems</span><span class="skill-tag">Event-Driven</span>
+            <span class="skill-tag">Microservices</span><span class="skill-tag">SOLID</span>
+            <span class="skill-tag">Strategy</span><span class="skill-tag">Facade</span>
+            <span class="skill-tag">Command</span><span class="skill-tag">Factory</span>
+            <span class="skill-tag">Idempotency</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>DevOps & Observability</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">CI/CD</span><span class="skill-tag">Jenkins</span>
+            <span class="skill-tag">ArgoCD</span><span class="skill-tag">Git</span>
+            <span class="skill-tag">Splunk</span><span class="skill-tag">VisualVM</span>
+            <span class="skill-tag">JUnit</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ EXPERIENCE TIMELINE ════ -->
+    <section id="experience">
+      <h2 class="section-title">Career Timeline</h2>
+      <p class="section-intro">20+ years across enterprise, defense, and SaaS engineering.</p>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2025 – Present</div>
+          <div class="tl-title">Senior Application Engineer</div>
+          <div class="tl-company">Zoox (Contract via Procom) &middot; Foster City, CA</div>
+          <div class="tl-desc">Led AI-powered performance review pipeline for 2,800+ employees. Partnered with HR and leadership on compliance. Reduced AI costs 60–80%.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2023 – 2025</div>
+          <div class="tl-title">Staff Software Engineer — Developer Success</div>
+          <div class="tl-company">Intuit &middot; San Diego, CA</div>
+          <div class="tl-desc">Designed AIDA AI support assistant across 220+ channels. Built metrics dashboard and insights pipeline.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2021 – 2023</div>
+          <div class="tl-title">Staff Software Engineer — Sanctions Screening Tech Lead</div>
+          <div class="tl-company">Intuit &middot; San Diego, CA</div>
+          <div class="tl-desc">Led Amber Road to LexisNexis migration. Architected event-driven compliance platform for 130M+ users.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2019 – 2021</div>
+          <div class="tl-title">Staff Software Engineer — Subscription Signup Tech Lead</div>
+          <div class="tl-company">Intuit &middot; San Diego, CA</div>
+          <div class="tl-desc">Designed idempotency solution with event tracking UI. Stabilized critical QBO signup APIs. Mentored team in design patterns.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2017 – 2019</div>
+          <div class="tl-title">Senior Software Engineer — Catalog Tech Lead</div>
+          <div class="tl-company">Intuit &middot; San Diego, CA</div>
+          <div class="tl-desc">Led Mule-to-Spring Boot migration. Achieved 60% performance gains and 90% faster cache responses via SOLID refactoring.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2010 – 2016</div>
+          <div class="tl-title">Senior Software Engineer / Tech Lead</div>
+          <div class="tl-company">Trey Software &middot; San Diego, CA</div>
+          <div class="tl-desc">Lead engineer for JIST — a DoD satellite resource management web application. Built rWaves cloud GIS SaaS platform.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2009 – 2010</div>
+          <div class="tl-title">Senior Application Developer</div>
+          <div class="tl-company">TechFlow &middot; San Diego, CA</div>
+          <div class="tl-desc">Designed business opportunity tracking system. Maintained GSA applications.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2005 – 2008</div>
+          <div class="tl-title">Senior Software Engineer / Systems Analyst</div>
+          <div class="tl-company">Predicate Logic &middot; San Diego, CA</div>
+          <div class="tl-desc">Built SOA integration for JIST-NET and IWPT. Oracle DBA and systems analysis for defense applications.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2000 – 2004</div>
+          <div class="tl-title">Application Developer</div>
+          <div class="tl-company">Sonalysts &middot; San Diego, CA</div>
+          <div class="tl-desc">Managed 7-person team building naval data repository for JSIMS battlefield simulator. Led 3-developer team on data warehouse.</div>
+        </div>
+        <div class="tl-item military">
+          <div class="tl-dot"></div>
+          <div class="tl-date">1989 – 1999</div>
+          <div class="tl-title">Operations Specialist 1st Class (SW/AW)</div>
+          <div class="tl-company">United States Navy &middot; San Diego, CA</div>
+          <div class="tl-desc">USS Constellation Battle Group. JMCIS database, NTDS tactical systems, Link-11. Navy Achievement Medal.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ EDUCATION & MILITARY ════ -->
+    <section id="education">
+      <h2 class="section-title">Education & Military Service</h2>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <h3>Bachelor of Science</h3>
+          <div class="edu-sub">Chapman University &middot; 1998</div>
+          <p>Computer Information Systems</p>
+        </div>
+        <div class="edu-card military">
+          <h3>United States Navy</h3>
+          <div class="edu-sub">Operations Specialist 1st Class (SW/AW) &middot; 1989–1999</div>
+          <p>USS Constellation Battle Group. Managed JMCIS database and LAN connectivity. Supervised air and surface tactical warfare pictures using NTDS and Link-11. Navy Instructor at Fleet Combat Training Center Pacific.</p>
+          <span class="award-badge">Navy Achievement Medal</span>
+          <span class="award-badge">Letter of Commendation</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ LINKS ════ -->
+    <section id="links">
+      <h2 class="section-title">Links</h2>
       <div class="contact-grid">
         <div class="contact-card">
           <span class="contact-label">GitHub</span>
-          <a href="https://github.com/cmariscalaws" target="_blank" rel="noopener noreferrer">
-            github.com/cmariscalaws
-          </a>
+          <a href="https://github.com/cmariscalaws" target="_blank" rel="noopener noreferrer">github.com/cmariscalaws</a>
         </div>
-
         <div class="contact-card">
           <span class="contact-label">LinkedIn</span>
-          <a href="https://www.linkedin.com/in/carlosmariscal" target="_blank" rel="noopener noreferrer">
-            linkedin.com/in/carlosmariscal
-          </a>
+          <a href="https://www.linkedin.com/in/carlosmariscal" target="_blank" rel="noopener noreferrer">linkedin.com/in/carlosmariscal</a>
         </div>
-
         <div class="contact-card">
           <span class="contact-label">Resume</span>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-            View resume PDF
-          </a>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">View resume PDF</a>
         </div>
       </div>
     </section>
 
+    <!-- ════ CONTACT ════ -->
     <section id="contact">
       <h2 class="section-title">Contact</h2>
-      <p class="section-intro">
-        The easiest way to reach me is by email or LinkedIn.
-      </p>
-
+      <p class="section-intro">The easiest way to reach me is by email or LinkedIn.</p>
       <div class="contact-grid">
         <div class="contact-card">
           <span class="contact-label">Email</span>
-          <a href="mailto:contact@carlos-mariscal.com">Contact Me</a>
+          <a href="mailto:contact@carlos-mariscal.com">contact@carlos-mariscal.com</a>
         </div>
-
         <div class="contact-card">
           <span class="contact-label">LinkedIn</span>
-          <a href="https://www.linkedin.com/in/carlosmariscal" target="_blank" rel="noopener noreferrer">
-            Connect on LinkedIn
-          </a>
+          <a href="https://www.linkedin.com/in/carlosmariscal" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
         </div>
-
         <div class="contact-card">
-          <span class="contact-label">Site</span>
-          Hosted on AWS with S3, CloudFront, Route 53, and ACM.
+          <span class="contact-label">Hosting</span>
+          AWS &middot; S3, CloudFront, Route 53, ACM
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="container">
-    © 2026 Carlos Mariscal
+    &copy; 2026 Carlos Mariscal
   </footer>
+
+  <script>
+    function toggleCase(header) {
+      const detail = header.nextElementSibling;
+      const toggle = header.querySelector('.case-toggle');
+      const isOpen = detail.classList.contains('open');
+      detail.classList.toggle('open');
+      toggle.textContent = isOpen ? '+' : '−';
+    }
+  </script>
 </body>
 </html>
