@@ -162,6 +162,13 @@ Kittinan Ponkaew (Software Engineer, Intuit, 4 years together):
 Rao Madhavrao (Senior Director Bioinformatics, former manager):
 "He started making significant contributions within a week and within a month he was already leading a project with accolades from everyone he interacted with. He is the kind of person who makes the Manager's job easy because there is no need to manage him."
 
+## Compensation & Work Preferences
+
+- Salary range: $210k–$230k
+- Hourly range: $115/hr–$130/hr
+- Open to both contract (W-2 or 1099) and full-time salaried positions
+- Work arrangement: Remote, on-site, or hybrid — but on-site/hybrid only in San Diego, CA
+
 ## Key Talking Points
 
 - I position myself as a Staff Software Engineer who leads through architecture, technical execution, and team building.
