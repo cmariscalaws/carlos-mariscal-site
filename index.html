@@ -332,6 +332,102 @@
       .skills-grid { grid-template-columns: 1fr; }
       .case-outcomes { grid-template-columns: 1fr; }
     }
+
+    /* ── AI AGENT CHAT WIDGET ── */
+    .chat-fab {
+      position: fixed; bottom: 28px; right: 28px; z-index: 200;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: linear-gradient(135deg, #2563eb, #38bdf8);
+      border: none; cursor: pointer; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 24px rgba(37,99,235,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .chat-fab:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 32px rgba(37,99,235,0.55);
+    }
+    .chat-fab svg { width: 28px; height: 28px; }
+    .chat-fab-label {
+      position: fixed; bottom: 36px; right: 100px; z-index: 199;
+      background: var(--panel); border: 1px solid var(--border);
+      color: var(--text); font-size: 0.82rem; font-weight: 600;
+      padding: 8px 14px; border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      pointer-events: none;
+      opacity: 0; transform: translateX(8px);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    .chat-fab:hover + .chat-fab-label { opacity: 1; transform: translateX(0); }
+    .chat-fab-pulse {
+      position: fixed; bottom: 28px; right: 28px; z-index: 199;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: rgba(56,189,248,0.25);
+      animation: fab-ping 2s cubic-bezier(0,0,0.2,1) infinite;
+      pointer-events: none;
+    }
+    @keyframes fab-ping {
+      0% { transform: scale(1); opacity: 0.6; }
+      75%, 100% { transform: scale(1.6); opacity: 0; }
+    }
+    .chat-panel {
+      position: fixed; bottom: 100px; right: 28px; z-index: 201;
+      width: 380px; max-height: 520px;
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 20px; box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+      display: none; flex-direction: column; overflow: hidden;
+    }
+    .chat-panel.open { display: flex; }
+    .chat-panel-header {
+      padding: 16px 20px; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .chat-panel-header h3 { color: #fff; font-size: 0.95rem; font-weight: 700; }
+    .chat-close {
+      background: none; border: none; color: var(--muted); cursor: pointer;
+      font-size: 1.3rem; padding: 0; line-height: 1; transition: color 0.2s;
+    }
+    .chat-close:hover { color: #fff; }
+    .chat-body {
+      flex: 1; padding: 20px; overflow-y: auto;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .chat-bubble {
+      background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.15);
+      border-radius: 14px; padding: 14px 16px;
+      color: var(--text); font-size: 0.88rem; line-height: 1.6;
+    }
+    .chat-input-row {
+      padding: 14px 16px; border-top: 1px solid var(--border);
+      display: flex; gap: 10px;
+    }
+    .chat-input {
+      flex: 1; background: rgba(148,163,184,0.08); border: 1px solid var(--border);
+      border-radius: 10px; padding: 10px 14px; color: var(--text);
+      font-size: 0.88rem; font-family: inherit; outline: none;
+      transition: border-color 0.2s;
+    }
+    .chat-input::placeholder { color: var(--muted); }
+    .chat-input:focus { border-color: rgba(56,189,248,0.4); }
+    .chat-send {
+      background: linear-gradient(135deg, #2563eb, #38bdf8);
+      border: none; border-radius: 10px; padding: 10px 14px;
+      color: #fff; cursor: pointer; font-weight: 600; font-size: 0.85rem;
+      transition: opacity 0.2s;
+    }
+    .chat-send:hover { opacity: 0.85; }
+    @media (max-width: 600px) {
+      .chat-panel { right: 12px; left: 12px; width: auto; bottom: 96px; }
+      .chat-fab { bottom: 20px; right: 20px; }
+      .chat-fab-pulse { bottom: 20px; right: 20px; }
+      .chat-fab-label { display: none; }
+    }
+
+    .btn-ai {
+      background: linear-gradient(135deg, #2563eb, #38bdf8);
+      color: #fff; position: relative; overflow: hidden;
+    }
+    .btn-ai:hover { opacity: 0.9; }
   </style>
 </head>
 <body>
@@ -358,15 +454,16 @@
     <!-- ════ HERO ════ -->
     <section class="hero">
       <div class="eyebrow">Staff Software Engineer</div>
-      <h1>Architecture leadership, distributed systems, and AI&#8209;powered platforms at scale.</h1>
+      <h1>Engineering leader. System architect. Team builder.</h1>
       <p class="subtitle">
-        20+ years designing and building scalable, resilient backend systems in cloud environments.
-        I lead complex cloud migrations, architect event-driven platforms, and mentor engineering
-        teams to deliver measurable business impact.
+        20 years turning complex problems into production-grade platforms. I design scalable,
+        resilient backend systems in cloud environments, lead complex migrations, and mentor
+        engineering teams to deliver measurable business impact.
       </p>
 
       <div class="hero-actions">
         <a class="btn btn-primary" href="#work">View Case Studies</a>
+        <button class="btn btn-ai" onclick="toggleChat()">Ask My AI</button>
         <a class="btn btn-ghost" href="mailto:carlosmariscal619@gmail.com">Contact Me</a>
         <a class="btn btn-ghost" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       </div>
@@ -767,7 +864,11 @@
           <h3>Languages & Frameworks</h3>
           <div class="skill-tags">
             <span class="skill-tag">Java</span><span class="skill-tag">Spring Boot</span>
-            <span class="skill-tag">Python</span><span class="skill-tag">Go</span>
+            <span class="skill-tag">Python</span><span class="skill-tag">Flask</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Boto3</span><span class="skill-tag">Pandas</span>
+            <span class="skill-tag">Pydantic</span><span class="skill-tag">pytest</span>
+            <span class="skill-tag">Go</span>
             <span class="skill-tag">TypeScript</span><span class="skill-tag">SQL</span>
           </div>
         </div>
@@ -794,29 +895,34 @@
         <div class="skill-group">
           <h3>AI & APIs</h3>
           <div class="skill-tags">
-            <span class="skill-tag">OpenAI API</span><span class="skill-tag">Prompt Engineering</span>
-            <span class="skill-tag">RAG</span><span class="skill-tag">Glean</span>
-            <span class="skill-tag">REST</span><span class="skill-tag">GraphQL</span>
-            <span class="skill-tag">SOAP</span>
+            <span class="skill-tag">OpenAI API</span><span class="skill-tag">Claude</span>
+            <span class="skill-tag">Gemini</span><span class="skill-tag">ChatGPT</span>
+            <span class="skill-tag">Cursor</span><span class="skill-tag">Prompt Engineering</span>
+            <span class="skill-tag">RAG</span><span class="skill-tag">Agentic AI</span>
+            <span class="skill-tag">Glean</span><span class="skill-tag">REST</span>
+            <span class="skill-tag">GraphQL</span><span class="skill-tag">SOAP</span>
           </div>
         </div>
         <div class="skill-group">
           <h3>Architecture & Patterns</h3>
           <div class="skill-tags">
             <span class="skill-tag">Distributed Systems</span><span class="skill-tag">Event-Driven</span>
-            <span class="skill-tag">Microservices</span><span class="skill-tag">SOLID</span>
+            <span class="skill-tag">Microservices</span><span class="skill-tag">DDD</span>
+            <span class="skill-tag">CQRS</span><span class="skill-tag">SAGA</span>
+            <span class="skill-tag">Pub-Sub</span><span class="skill-tag">API Gateway</span>
+            <span class="skill-tag">Circuit Breaker</span><span class="skill-tag">Throttling</span>
+            <span class="skill-tag">Idempotency</span><span class="skill-tag">SOLID</span>
             <span class="skill-tag">Strategy</span><span class="skill-tag">Facade</span>
             <span class="skill-tag">Command</span><span class="skill-tag">Factory</span>
-            <span class="skill-tag">Idempotency</span>
           </div>
         </div>
         <div class="skill-group">
           <h3>DevOps & Observability</h3>
           <div class="skill-tags">
-            <span class="skill-tag">CI/CD</span><span class="skill-tag">Jenkins</span>
+            <span class="skill-tag">CI/CD</span><span class="skill-tag">Jenkins</span><span class="skill-tag">Bamboo</span>
             <span class="skill-tag">ArgoCD</span><span class="skill-tag">Git</span>
-            <span class="skill-tag">Splunk</span><span class="skill-tag">VisualVM</span>
-            <span class="skill-tag">JUnit</span>
+            <span class="skill-tag">Splunk</span>            <span class="skill-tag">Grafana</span>
+            <span class="skill-tag">VisualVM</span><span class="skill-tag">JUnit</span>
           </div>
         </div>
       </div>
@@ -964,6 +1070,31 @@
     &copy; 2026 Carlos Mariscal
   </footer>
 
+  <!-- ════ AI AGENT FLOATING WIDGET ════ -->
+  <div class="chat-fab-pulse"></div>
+  <button class="chat-fab" onclick="toggleChat()" aria-label="Ask my AI assistant">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+  </button>
+  <div class="chat-fab-label">Ask me anything</div>
+
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-panel-header">
+      <h3>Carlos's AI Assistant</h3>
+      <button class="chat-close" onclick="toggleChat()">&times;</button>
+    </div>
+    <div class="chat-body">
+      <div class="chat-bubble">
+        Hi! I'm Carlos's AI assistant. Ask me about his experience, architecture work, technical skills, or anything else you'd like to know. <br><br><em>Agent coming soon — check back shortly.</em>
+      </div>
+    </div>
+    <div class="chat-input-row">
+      <input class="chat-input" type="text" placeholder="Ask about my experience..." disabled />
+      <button class="chat-send" disabled>Send</button>
+    </div>
+  </div>
+
   <script>
     function toggleCase(header) {
       const detail = header.nextElementSibling;
@@ -971,6 +1102,11 @@
       const isOpen = detail.classList.contains('open');
       detail.classList.toggle('open');
       toggle.textContent = isOpen ? '+' : '−';
+    }
+
+    function toggleChat() {
+      const panel = document.getElementById('chatPanel');
+      panel.classList.toggle('open');
     }
   </script>
 </body>
