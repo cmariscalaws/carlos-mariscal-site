@@ -1,4 +1,174 @@
-My name is CARLOS MARISCAL. I'm an architect, software engineer and technical leader. I'm originally from Los Angeles, CA, but I moved to San Diego, CA in 1995.
-I was in the Navy stationed in Hawaii for 5 years. The Navy brought me to San Diego in 1995 and have never left. I have 2 grown boys that I'm very proud of and watch their rock band play every chance I get. 
-I earned my BS in CIS while in the Navy going to night school while raising 2 young boys. It was hard but my proudest moment was when I earned my degree. 
-I take pride in improving teams that I'm a part of and if necessary providing the required leadership. 
+# CARLOS MARISCAL — Complete Profile
+
+## Personal Background
+
+My name is Carlos Mariscal. I'm a staff-level software engineer, system architect, and engineering leader based in San Diego, CA. I'm originally from Los Angeles but moved to San Diego in 1995 when the Navy stationed me here, and I've never left.
+
+I served in the US Navy for 10 years (1989–1999) as an Operations Specialist 1st Class (SW/AW) aboard the USS Constellation. I was stationed in Hawaii for 5 years before San Diego. I earned my BS in Computer Information Systems from Chapman University in 1998 while serving — going to night school and raising two young boys. That's one of my proudest accomplishments.
+
+I have two grown sons I'm very proud of. I watch their rock band play every chance I get.
+
+I take pride in improving every team I'm a part of and providing leadership when it's needed. I believe in understanding problems deeply before writing code, mentoring engineers through hands-on guidance, and building systems that are both resilient and maintainable.
+
+## Professional Identity
+
+- Title: Staff Software Engineer
+- Location: San Diego, CA
+- Email: carlosmariscal619@gmail.com
+- LinkedIn: linkedin.com/in/carlosmariscal
+- GitHub: github.com/cmariscalaws
+- Website: carlos-mariscal.com
+
+## Career Summary
+
+Software engineer with 20+ years of experience designing and building scalable, resilient, and fault-tolerant backend distributed systems deployed in cloud environments. Proven expertise across the full software development lifecycle — from analysis and prototyping to design, implementation, and testing — using engineering best practices and software design patterns.
+
+I combine deep hands-on technical execution with architecture leadership and pragmatic team mentorship. My track record includes delivering systems at enterprise scale across support automation, compliance platforms, subscription services, AI tooling, and defense applications. I've led complex cloud migrations, modernized legacy systems, architected event-driven platforms, and mentored engineering teams in high-impact environments.
+
+## AWS Certifications
+
+- AWS Certified Solutions Architect — Associate (2025)
+- AWS Certified Developer — Associate (2026)
+
+## Education
+
+- Bachelor of Science, Computer Information Systems — Chapman University (1998)
+- Earned while serving active duty in the US Navy, attending night school while raising two young children.
+
+## Military Service
+
+US Navy — Operations Specialist 1st Class (SW/AW), 1989–1999, San Diego, CA
+- Managed the USS Constellation's Battle Group JMCIS database, LAN connectivity, and inter-node communications.
+- Supervised air and surface tactical warfare pictures using NTDS and Link-11.
+- Served as Navy Instructor (Fleet Combat Training Center Pacific), Training Petty Officer, Track Supervisor, Watch Supervisor.
+- Awarded: Navy Achievement Medal, Letter of Commendation.
+
+## Career Timeline
+
+### Zoox — Foster City, CA (October 2025 – Present)
+Senior Application Engineer (Contract via Procom Services)
+- Led the design and delivery of an AI-powered Performance Review Assistant for company-wide biannual performance reviews, automating feedback collection and analysis for 2,800+ employees.
+- Partnered closely with HR, managers, and leadership to align business and compliance needs.
+- Cut end-to-end runtime substantially through parallelism, batching, and bottleneck removal.
+- Generated 26,000+ structured review artifacts with automated access control.
+- Saved approximately 1,400 manager hours per biannual cycle.
+- Reduced AI costs by 60–80% via intelligent caching.
+- Accelerated delivery using Cursor with the Claude Sonnet model.
+- Tech: Python, OpenAI API, Prompt Engineering, Cursor (Claude Sonnet).
+
+### Intuit Inc. — San Diego, CA (2017–2025)
+
+Staff Software Engineer, Developer Success Team (2023–2025):
+- Designed and implemented a Slack-based AI support assistant (AIDA) integrating Slack API, Jira API, OpenAI, and Glean RAG to automate support responses and escalate via Jira.
+- Deployed to 220+ support channels, reducing support volume by 27%, with the assistant handling 85% of Intuit's support message traffic.
+- Built a metrics dashboard to track escalation rates, bot response accuracy, and support volumes.
+- Developed an insights pipeline using Slack history, clustering models, and prompt engineering to recommend new documentation, product features, and tooling.
+- Tech: Python, Java, Spring Boot, Go, AWS Lambda, DynamoDB, SQS, Kubernetes, ArgoCD, GraphQL, REST, OpenAI, Prompt Engineering.
+
+Staff Software Engineer, Technical Lead — Sanctions Screening Service (2021–2023):
+- Led migration of Intuit's sanctions screening service from Amber Road to LexisNexis, driving architecture, design, and implementation of cloud infrastructure and backend systems.
+- Built reporting, batch screenings, and audit capabilities to ensure regulatory compliance.
+- Enabled enterprise-scale screening for 130M+ Credit Karma users, 14M+ Mailchimp users, and the broader TurboTax/QuickBooks customer base.
+- Tech: Java, Spring Boot, REST, Kafka, AWS (EC2, RDS, OpenSearch), Kubernetes, ArgoCD.
+
+Staff Software Engineer, Technical Lead — Subscription Signup Services (2019–2021):
+- Spearheaded stabilization of critical customer-facing subscription signup APIs, reducing production bug backlog and improving QBO subscription success rates.
+- Designed and implemented an event-driven idempotency solution with 7+ async consumers, tracking UI with replay capability, eliminating duplicate subscription bugs.
+- Mentored junior engineers in design patterns (Facade, Command, Factory Method, Strategy).
+- Tech: Java, Spring Boot, Redis, AWS (Aurora, DocumentDB), ActiveMQ, Jenkins, Docker, Kubernetes, ArgoCD.
+
+Senior Software Engineer, Technical Lead — Catalog (2017–2019):
+- Led migration from Mule to Spring Boot microservices and transitioned key APIs from on-premise to AWS.
+- Refactored complex legacy Catalog API (1,381 lines in a single class) using SOLID principles and concurrent processing, achieving 60% performance gains.
+- Implemented Redis-based caching layer, resulting in 90% faster response times for cache hits.
+- Tech: Java, Spring Boot, Redis, AWS, Jenkins, JPA, REST, Amazon Aurora.
+
+### Trey Software — San Diego, CA (2010–2016)
+Senior Software Engineer, Technical Lead
+- Lead engineer for the Joint Integrated SATCOM Tool (JIST) — a DoD web application that automates satellite resource management.
+- Developed rWaves, a cloud-based big data GIS SaaS platform for RippleNami providing operational awareness.
+- Tech: Java, J2EE, JPA, Struts, JSP, REST, SQL, Oracle, AngularJS, Node.js.
+
+### TechFlow Inc. — San Diego, CA (2009–2010)
+Senior Application Developer
+- Designed business opportunity tracking system. Maintained GSA applications.
+- Tech: Java, Spring, Struts, Hibernate, JSP, JBoss, Maven, SQL, Oracle.
+
+### Predicate Logic Inc. — San Diego, CA (2005–2008)
+Senior Software Engineer / Systems Analyst
+- Built SOA integration for JIST-NET and IWPT using SOAP Web Services.
+- Oracle DBA for JIST-NET. Systems analysis with DFDs, Use Cases, ERDs.
+- Tech: Java, SOAP, Apache Axis, WSDL, XML, JBoss, Oracle.
+
+### Sonalysts Inc. — San Diego, CA (2000–2004)
+Application Developer
+- Managed 7-person team building naval data repository for JSIMS battlefield simulator.
+- Led 3-developer team on data warehouse application.
+- Tech: Java, XML, SQL, Visual Basic, Oracle, ASP.NET, VB.NET, SQL Server.
+
+## Key Projects — Detailed Case Studies
+
+### 1. AI Support Assistant (AIDA) — Intuit (2023–2025)
+Problem: Intuit's internal developer support was overwhelmed across hundreds of Slack channels. No automated triage or response. Knowledge scattered across Slack history, wikis, Autura docs, GitHub markup, StackOverflow.
+Architecture: Multi-service platform — Slack App (Lambda + Go) for event routing, AIDA Service (Java, Spring Boot, K8s) for orchestration with OpenAI and Glean RAG, Support Eco Service (Go) for StackOverflow-style Q&A, Insights Pipeline (Python, Lambda, SQS, DynamoDB) using clustering models and specialized prompts to identify doc gaps/enhancements/tool opportunities, Metrics Dashboard (Java, Spring Boot, DynamoDB), and a dedicated Retry Architecture for transient failures.
+Outcomes: 220+ channels served, 85% message traffic handled automatically, 27% support volume reduction, data-driven insights pipeline, metrics dashboard for continuous improvement.
+
+### 2. Sanctions Screening Platform Migration — Intuit (2021–2023)
+Problem: Needed to migrate from Amber Road to LexisNexis after acquiring Credit Karma (130M+ users) and Mailchimp (14M+ users). Legacy platform lacked reporting, batch screening, and audit capabilities.
+Architecture: Event-driven platform with Real-Time Screening API calling Bridger/LexisNexis, Kafka topics (SanctionScreeningTopic, SanctionScreeningEnvelopeTopic, ScreeningEventTopic) with dedicated consumers, multi-stage Batch Processing Pipeline with SFTP/S3, Audit Data Warehouse storing Screening/Contact/Decision/Alert History, Data Migration from Amber Road, CSV Ingestion for OM Agent uploads, and resilience via API retry and Screening Event retry with exhaustion handling.
+Outcomes: 130M+ Credit Karma records screened, 14M+ Mailchimp records screened, delivered reporting/batch/audit capabilities, supported post-acquisition compliance across all Intuit product teams.
+
+### 3. AI Performance Review Assistant — Zoox (2025–Present)
+Problem: Biannual performance reviews for 2,800+ employees consumed thousands of manager hours with no consistency.
+Architecture: AI-powered pipeline with automated feedback collection, LLM-based analysis for structured reviews, parallelism and batching for throughput, intelligent caching to reduce redundant LLM calls, and automated role-based access control.
+Outcomes: 26,000+ review artifacts generated, 2,800+ employees covered, ~1,400 manager hours saved per cycle, 60–80% AI cost reduction via caching.
+
+### 4. Subscription Signup Idempotency — Intuit (2019–2021)
+Problem: Critical production bugs from duplicate signup requests — multiple subscriptions created, grants inactivated, incorrect correlation IDs, poison messages unprocessed. Directly impacted QBO subscription success rates.
+Architecture: Event-driven idempotency solution using DocumentDB for deduplication keyed by webs_request_id, 7+ async consumers (Signup, Process Subscription, Caching, Event Publisher, Failure Event, Transaction History, Signup Retry) each publishing typed SignupEventDTOs, event sourcing for full audit trail, automatic STANDBY replay on failure, Tracking UI and API for L1/L2 support with replay capability, poison message handling with configurable exhaustion, and data lifecycle cron (3/7/30 day purges).
+Outcomes: Eliminated duplicate subscription bugs, real-time signup lifecycle visibility, automated failed transaction replay, mentored team of 5 engineers in design patterns and distributed systems.
+
+### 5. Private Catalog Offers Refactoring — Intuit (2017–2019)
+Problem: Monolithic 1,381-line OfferServiceImpl class. VisualVM showed 1,236 DB calls taking 53.9s. Production worst-case response: 43,485ms. 20-minute unit test runs.
+Architecture: Strategy pattern for query actions (Addition, Migration, Change, Switch strategies), extracted Catalog Model Library for reuse, Redis/CouchBase caching with Quartz-scheduled refresh (2h/12h), concurrent processing for parallelized DB calls, early pagination (before processing, max 500), single batched query replacing 1,236 individual transition calls.
+Outcomes: 60% performance gains, 90% faster response times with caching, DB calls reduced from 1,236 to 1, SOLID decomposition, migrated from Mule to Spring Boot on AWS.
+
+## Technical Skills
+
+Languages & Frameworks: Java, Spring Boot, Spring MVC, Python, Flask, FastAPI, Boto3, Pandas, Pydantic, pytest, Go, TypeScript, JavaScript, SQL.
+Cloud & Infrastructure: AWS (S3, SQS, SNS, Lambda, DynamoDB, Aurora, EC2, Redis/ElastiCache, CloudFormation, CDK, OpenSearch, DocumentDB, RDS), Kubernetes, Docker, ArgoCD, Jenkins, Bamboo.
+Data & Messaging: Apache Kafka, ActiveMQ/JMS, DynamoDB, Amazon Aurora, DocumentDB, Redis, Oracle, SQL Server, OpenSearch, S3.
+AI & APIs: OpenAI API, Claude, Gemini, ChatGPT, Cursor, Prompt Engineering, RAG, Agentic AI, Glean, REST, GraphQL, SOAP.
+Architecture & Patterns: Distributed Systems, Event-Driven, Microservices, DDD, CQRS, SAGA, Pub-Sub, API Gateway, Circuit Breaker, Throttling, Idempotency, SOLID, Strategy, Facade, Command, Factory.
+DevOps & Observability: CI/CD, Jenkins, Bamboo, ArgoCD, Git, Splunk, Grafana, VisualVM, JUnit.
+
+## What Colleagues Say About Me
+
+Maria Goretti Rivera (Application Engineer, Zoox):
+"What stands out most about Carlos is his approach to engineering — he never just dives into the code. He takes the time to deeply understand the problem first, which reflects in the quality of his design and architecture work. He has a remarkable ability to take large, complex challenges and break them down into clear, actionable steps."
+
+Gurveer Khakh (Software Engineer, Intuit, 3+ years together):
+"He created a tool that automated support across more than 220 channels — a game-changer, handling 85% of support message traffic and reducing support volume by 27%. Carlos is a natural leader who consistently elevates the quality of work around him."
+
+Raul I. Garcia (Sr. Staff Software Engineer, eHealth, 7 years together at Intuit):
+"Carlos played a key role in refactoring legacy systems into scalable, modern architectures. He introduced performance optimizations across the oBill and Sanctions Screening platforms, many resulting in measurable revenue gains."
+
+Tanvi Panchal (Software Dev Manager, Ingram Micro, 6 years together at Intuit):
+"Carlos led the migration from on-premise to the cloud, transitioning legacy Mule services to modern Spring Boot microservices. He designed an event-driven architecture to tackle challenging idempotency issues — a critical advancement for the platform's reliability."
+
+Kittinan Ponkaew (Software Engineer, Intuit, 4 years together):
+"Carlos's leadership style stood out as exceptional — he encouraged me to explore new ideas, provided opportunities for growth, and helped me learn valuable lessons from mistakes without fear of judgment. His guidance had a lasting impact on my career."
+
+Rao Madhavrao (Senior Director Bioinformatics, former manager):
+"He started making significant contributions within a week and within a month he was already leading a project with accolades from everyone he interacted with. He is the kind of person who makes the Manager's job easy because there is no need to manage him."
+
+## Key Talking Points
+
+- I position myself as a Staff Software Engineer who leads through architecture, technical execution, and team building.
+- I don't just write code — I understand problems deeply before designing solutions. My design documents are thorough (e.g., the 18-page idempotency detailed design).
+- I've worked across enterprise (Intuit, Zoox), defense (DoD satellite systems, naval simulators), and SaaS (GIS platforms).
+- I'm passionate about AI and have built production AI systems — not just experiments. AIDA handled 85% of Intuit's support traffic. The Zoox review assistant generated 26,000+ artifacts.
+- I mentor engineers and build strong teams. Multiple colleagues cite my mentorship as having a lasting impact on their careers.
+- I'm AWS certified (Solutions Architect + Developer) and deeply experienced with cloud-native architectures.
+- I'm a US Navy veteran who earned his degree while serving active duty and raising a family. That discipline and work ethic carries through everything I do.
+- My website is hosted on AWS with S3, CloudFront, Route 53, and ACM.
