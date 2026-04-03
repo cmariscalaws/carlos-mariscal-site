@@ -67,12 +67,24 @@
       background: radial-gradient(circle, rgba(56,189,248,0.1) 0%, transparent 70%);
       pointer-events: none;
     }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr 320px; gap: 48px; align-items: center;
+    }
+    .hero-image img {
+      width: 100%; border-radius: 50%;
+      border: 3px solid rgba(56,189,248,0.3);
+      box-shadow: 0 0 60px rgba(56,189,248,0.15);
+    }
+    .hero-name {
+      font-size: clamp(2.8rem, 7vw, 4.8rem); font-weight: 900;
+      letter-spacing: -0.02em; color: #fff; margin-bottom: 8px; line-height: 1;
+    }
     .eyebrow {
       display: inline-block; color: var(--accent); font-weight: 700;
       font-size: 0.88rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;
     }
     h1 {
-      font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.08;
+      font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.12;
       letter-spacing: -0.03em; color: #fff; max-width: 860px; font-weight: 900;
     }
     .subtitle {
@@ -303,6 +315,17 @@
       border-radius: 999px; padding: 3px 10px;
     }
 
+    /* ── READING LIST ── */
+    .reading-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .book-card {
+      background: rgba(17,24,39,0.75); border: 1px solid var(--border);
+      border-radius: 18px; padding: 24px; transition: border-color 0.3s;
+    }
+    .book-card:hover { border-color: rgba(56,189,248,0.3); }
+    .book-title { font-weight: 700; color: #fff; font-size: 1.05rem; margin-bottom: 4px; }
+    .book-author { color: var(--accent); font-size: 0.85rem; font-weight: 500; margin-bottom: 10px; }
+    .book-summary { color: var(--text); font-size: 0.88rem; line-height: 1.65; }
+
     /* ── CONTACT / LINKS ── */
     .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
     .contact-card {
@@ -321,6 +344,8 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-image { order: -1; max-width: 240px; margin: 0 auto; }
       .highlights, .contact-grid { grid-template-columns: 1fr; }
       .cert-grid { grid-template-columns: 1fr; }
       .testimonials-grid { grid-template-columns: 1fr; }
@@ -331,6 +356,7 @@
     @media (max-width: 600px) {
       .skills-grid { grid-template-columns: 1fr; }
       .case-outcomes { grid-template-columns: 1fr; }
+      .reading-grid { grid-template-columns: 1fr; }
     }
 
     /* ── AI AGENT CHAT WIDGET ── */
@@ -420,6 +446,7 @@
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
+        <a href="#reading">Reading</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -429,19 +456,28 @@
 
     <!-- ════ HERO ════ -->
     <section class="hero">
-      <div class="eyebrow">Staff Software Engineer</div>
-      <h1>Engineering leader. System architect. Team builder.</h1>
-      <p class="subtitle">
-        20 years turning complex problems into production-grade platforms. I design scalable,
-        resilient backend systems in cloud environments, lead complex migrations, and mentor
-        engineering teams to deliver measurable business impact.
-      </p>
+      <div class="hero-grid">
+        <div class="hero-text">
+          <div class="hero-name">Carlos Mariscal</div>
+          <div class="eyebrow">Staff Software Engineer</div>
+          <h1>Engineering leader. System architect. Team builder.</h1>
+          <p class="subtitle">
+            20 years turning complex problems into production-grade platforms. I design scalable,
+            resilient backend systems in cloud environments, lead complex migrations, and mentor
+            engineering teams to deliver measurable business impact.
+          </p>
 
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#work">View Case Studies</a>
-        <button class="btn btn-ai" onclick="toggleChat()">Ask My AI</button>
-        <a class="btn btn-ghost" href="mailto:carlosmariscal619@gmail.com">Contact Me</a>
-        <a class="btn btn-ghost" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#work">View Case Studies</a>
+            <button class="btn btn-ai" onclick="toggleChat()">Ask My AI</button>
+            <a class="btn btn-ghost" href="mailto:carlosmariscal619@gmail.com">Contact Me</a>
+            <a class="btn btn-ghost" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img src="images/carlos-headshot.png" alt="Carlos Mariscal — Staff Software Engineer" />
+        </div>
       </div>
 
       <div class="highlights">
@@ -997,6 +1033,96 @@
           <p>USS Constellation Battle Group. Managed JMCIS database and LAN connectivity. Supervised air and surface tactical warfare pictures using NTDS and Link-11. Navy Instructor at Fleet Combat Training Center Pacific.</p>
           <span class="award-badge">Navy Achievement Medal</span>
           <span class="award-badge">Letter of Commendation</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ READING LIST ════ -->
+    <section id="reading">
+      <h2 class="section-title">Reading List</h2>
+      <p class="section-intro">
+        Books that have shaped how I think about engineering, architecture, and leadership.
+      </p>
+      <div class="reading-grid">
+        <div class="book-card">
+          <div class="book-title">After Steve: How Apple Became a Trillion-Dollar Company and Lost Its Soul</div>
+          <div class="book-author">Tripp Mickle</div>
+          <p class="book-summary">Chronicles the diverging paths of Jony Ive and Tim Cook after Steve Jobs's death, revealing how Apple's shift from design-driven innovation to operational and financial optimization reshaped the company. A compelling study of how leadership transitions and cultural priorities determine whether a technology company innovates or optimizes.</p>
+        </div>
+        <div class="book-card">
+          <div class="book-title">Artificial Intelligence: A Guide for Thinking Humans</div>
+          <div class="book-author">Melanie Mitchell</div>
+          <p class="book-summary">A clear-eyed exploration of what AI can and cannot actually do, cutting through both the hype and the fear. Mitchell examines deep learning, computer vision, and natural language processing with rigor, making it an essential read for engineers who want to separate real capability from marketing promises when building AI-powered systems.</p>
+        </div>
+        <div class="book-card">
+          <div class="book-title">Fundamentals of Software Architecture: An Engineering Approach</div>
+          <div class="book-author">Mark Richards &amp; Neal Ford</div>
+          <p class="book-summary">A modern, practical framework for thinking about architecture styles, component design, and the soft skills architects need to be effective. Covers trade-off analysis, architecture characteristics, and patterns like microservices and event-driven systems in a way that's immediately applicable to real-world decision-making.</p>
+        </div>
+        <div class="book-card">
+          <div class="book-title">Bring Your Whole Self to Work: How Vulnerability Unlocks Creativity, Connection, and Performance</div>
+          <div class="book-author">Mike Robbins</div>
+          <p class="book-summary">Makes the case that authenticity and vulnerability are not weaknesses but leadership strengths that unlock trust, collaboration, and high performance. Directly relevant to building engineering cultures where psychological safety enables teams to take technical risks, raise concerns early, and mentor openly.</p>
+        </div>
+        <div class="book-card">
+          <div class="book-title">Where Good Ideas Come From: The Natural History of Innovation</div>
+          <div class="book-author">Steven Johnson</div>
+          <p class="book-summary">Traces the recurring patterns behind breakthrough innovations&mdash;from adjacent possible and liquid networks to slow hunches and serendipity. Reframes innovation not as lone genius but as the product of connected environments, reinforcing why cross-functional collaboration and diverse technical exposure lead to better engineering solutions.</p>
+        </div>
+        <div class="book-card">
+          <div class="book-title">Drive: The Surprising Truth About What Motivates Us</div>
+          <div class="book-author">Daniel H. Pink</div>
+          <p class="book-summary">Dismantles the carrot-and-stick model of motivation, showing that autonomy, mastery, and purpose are the real drivers of high performance. Essential reading for engineering leaders who want to understand why the best developers thrive on challenging problems, ownership of their work, and a clear sense of impact.</p>
+        </div>
+        <div class="book-card">
+          <div class="book-title">Steve Jobs</div>
+          <div class="book-author">Walter Isaacson</div>
+          <p class="book-summary">The definitive biography of Apple's cofounder, built from over forty interviews with Jobs himself. An unflinching look at how relentless product vision, obsessive attention to detail, and willingness to challenge convention can reshape entire industries&mdash;while also exploring the human costs of that intensity.</p>
+        </div>
+        <div class="book-card">
+          <div class="book-title">The Dichotomy of Leadership: Balancing the Challenges of Extreme Ownership to Lead and Win</div>
+          <div class="book-author">Jocko Willink &amp; Leif Babin</div>
+          <p class="book-summary">Builds on the Extreme Ownership framework by exploring the tensions every leader must navigate&mdash;when to lead and when to follow, when to hold the line and when to be flexible. Draws from combat and business scenarios to show that effective leadership is never about absolutes but about finding the right balance under pressure.</p>
+        </div>
+        <div class="book-card">
+          <div class="book-title">Extreme Ownership: How U.S. Navy SEALs Lead and Win</div>
+          <div class="book-author">Jocko Willink &amp; Leif Babin</div>
+          <p class="book-summary">The foundational leadership book that argues there are no bad teams, only bad leaders. Distills combat-tested principles&mdash;own every outcome, keep plans simple, prioritize and execute&mdash;into a framework that translates directly to leading engineering teams through high-stakes deliverables and organizational complexity.</p>
+        </div>
+        <div class="book-card">
+          <div class="book-title">The Idea Factory: Bell Labs and the Great Age of American Innovation</div>
+          <div class="book-author">Jon Gertner</div>
+          <p class="book-summary">Chronicles how Bell Labs became the most productive research institution in history by combining brilliant individuals with the right organizational structure, patient funding, and cross-disciplinary collaboration. A powerful case study in how engineering culture, physical proximity, and long-term thinking produce transformative breakthroughs.</p>
+        </div>
+        <div class="book-card">
+          <div class="book-title">Dealers of Lightning: Xerox PARC and the Dawn of the Computer Age</div>
+          <div class="book-author">Michael A. Hiltzik</div>
+          <p class="book-summary">The inside story of Xerox PARC, where a small team of eccentric engineers invented the personal computer, laser printing, Ethernet, and the graphical user interface&mdash;only for Xerox to fumble the commercialization. A cautionary tale about what happens when visionary engineering is disconnected from organizational leadership and product strategy.</p>
+        </div>
+        <div class="book-card">
+          <div class="book-title">The Snowball: Warren Buffett and the Business of Life</div>
+          <div class="book-author">Alice Schroeder</div>
+          <p class="book-summary">The most comprehensive biography of Warren Buffett, tracing how disciplined long-term thinking, compounding effort, and an obsession with understanding fundamentals built one of the greatest track records in history. A masterclass in patience, strategic focus, and the power of staying within your circle of competence.</p>
+        </div>
+        <div class="book-card">
+          <div class="book-title">Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future</div>
+          <div class="book-author">Ashlee Vance</div>
+          <p class="book-summary">An authorized look at how Musk simultaneously built Tesla and SpaceX by applying first-principles thinking, vertical integration, and an unrelenting pace of execution. Illustrates both the extraordinary outcomes and the brutal trade-offs of betting everything on engineering-driven disruption across multiple industries at once.</p>
+        </div>
+        <div class="book-card">
+          <div class="book-title">The Everything Store: Jeff Bezos and the Age of Amazon</div>
+          <div class="book-author">Brad Stone</div>
+          <p class="book-summary">The definitive account of how Bezos built Amazon from an online bookstore into the infrastructure backbone of modern commerce. Reveals the relentless customer obsession, data-driven decision-making, and willingness to operate at a loss for years that made AWS, Prime, and the two-pizza team model possible.</p>
+        </div>
+        <div class="book-card">
+          <div class="book-title">iWoz: How I Invented the Personal Computer and Had Fun Along the Way</div>
+          <div class="book-author">Steve Wozniak &amp; Gina Smith</div>
+          <p class="book-summary">Wozniak's own account of designing the Apple I and Apple II from scratch, driven purely by the joy of engineering elegant solutions with minimal components. A reminder that the best technical work often comes from intrinsic curiosity, resourcefulness, and the drive to build something that simply didn't exist before.</p>
+        </div>
+        <div class="book-card">
+          <div class="book-title">The Innovators: How a Group of Hackers, Geniuses, and Geeks Created the Digital Revolution</div>
+          <div class="book-author">Walter Isaacson</div>
+          <p class="book-summary">Traces the full arc of the digital revolution from Ada Lovelace through the internet, showing that every major breakthrough&mdash;the transistor, the microchip, the PC, the web&mdash;was the product of collaborative teams, not solo inventors. A compelling argument that sustained innovation requires both individual brilliance and the ability to work across disciplines.</p>
         </div>
       </div>
     </section>
