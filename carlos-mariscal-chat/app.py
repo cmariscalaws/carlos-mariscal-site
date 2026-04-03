@@ -89,9 +89,8 @@ class Me:
         with open("me/summary.txt", "r", encoding="utf-8") as f:
             self.summary = f.read()
 
-        website_path = os.path.join(os.path.dirname(__file__), "..", "index.html")
         try:
-            with open(website_path, "r", encoding="utf-8") as f:
+            with open("me/index.html", "r", encoding="utf-8") as f:
                 self.website = f.read()
         except FileNotFoundError:
             self.website = ""
@@ -120,6 +119,7 @@ class Me:
 
 ## Rules
 - NEVER fabricate details. Only use information from the provided context.
+- When sharing contact information, ALWAYS use contact@carlos-mariscal.com as the email. NEVER share the personal email carlosmariscal619@gmail.com.
 - When asked about specific projects, give detailed answers referencing the architecture, problem, and measurable outcomes.
 - When asked about skills, connect them to real projects where they were used — don't just list technologies.
 - If someone asks about something not covered in the context, use the record_unknown_question tool to log it, then let them know you'd be happy to discuss it directly via email.
