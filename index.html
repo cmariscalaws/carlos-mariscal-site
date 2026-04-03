@@ -256,8 +256,27 @@
     }
 
     /* ── SKILLS ── */
+    .skills-accordion {
+      border: 1px solid var(--border); border-radius: 18px;
+      background: rgba(17,24,39,0.5); overflow: hidden;
+    }
+    .skills-accordion summary {
+      padding: 20px 28px; cursor: pointer; list-style: none;
+      display: flex; align-items: center; justify-content: space-between;
+      font-weight: 700; color: #fff; font-size: 1.05rem;
+      transition: background 0.2s;
+    }
+    .skills-accordion summary:hover { background: rgba(56,189,248,0.05); }
+    .skills-accordion summary::-webkit-details-marker { display: none; }
+    .skills-accordion summary::after {
+      content: '\25B6'; font-size: 0.75rem; color: var(--muted);
+      transition: transform 0.3s;
+    }
+    .skills-accordion[open] summary::after { transform: rotate(90deg); }
+    .skills-accordion[open] summary { border-bottom: 1px solid var(--border); }
     .skills-grid {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;
+      padding: 20px;
     }
     .skill-group {
       background: rgba(17,24,39,0.75); border: 1px solid var(--border);
@@ -316,7 +335,28 @@
     }
 
     /* ── READING LIST ── */
-    .reading-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .reading-accordion {
+      border: 1px solid var(--border); border-radius: 18px;
+      background: rgba(17,24,39,0.5); overflow: hidden;
+    }
+    .reading-accordion summary {
+      padding: 20px 28px; cursor: pointer; list-style: none;
+      display: flex; align-items: center; justify-content: space-between;
+      font-weight: 700; color: #fff; font-size: 1.05rem;
+      transition: background 0.2s;
+    }
+    .reading-accordion summary:hover { background: rgba(56,189,248,0.05); }
+    .reading-accordion summary::-webkit-details-marker { display: none; }
+    .reading-accordion summary::after {
+      content: '\25B6'; font-size: 0.75rem; color: var(--muted);
+      transition: transform 0.3s;
+    }
+    .reading-accordion[open] summary::after { transform: rotate(90deg); }
+    .reading-accordion[open] summary { border-bottom: 1px solid var(--border); }
+    .reading-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;
+      padding: 20px;
+    }
     .book-card {
       background: rgba(17,24,39,0.75); border: 1px solid var(--border);
       border-radius: 18px; padding: 24px; transition: border-color 0.3s;
@@ -871,7 +911,9 @@
     <section id="skills">
       <h2 class="section-title">Technical Skills</h2>
       <p class="section-intro">Core technologies and practices I work with regularly.</p>
-      <div class="skills-grid">
+      <details class="skills-accordion">
+        <summary>6 categories across languages, cloud, data, AI, architecture, and DevOps</summary>
+        <div class="skills-grid">
         <div class="skill-group">
           <h3>Languages & Frameworks</h3>
           <div class="skill-tags">
@@ -938,6 +980,7 @@
           </div>
         </div>
       </div>
+      </details>
     </section>
 
     <!-- ════ EXPERIENCE TIMELINE ════ -->
@@ -1043,7 +1086,9 @@
       <p class="section-intro">
         Books that have shaped how I think about engineering, architecture, and leadership.
       </p>
-      <div class="reading-grid">
+      <details class="reading-accordion">
+        <summary>16 books on engineering, leadership, and innovation</summary>
+        <div class="reading-grid">
         <div class="book-card">
           <div class="book-title">After Steve: How Apple Became a Trillion-Dollar Company and Lost Its Soul</div>
           <div class="book-author">Tripp Mickle</div>
@@ -1125,6 +1170,7 @@
           <p class="book-summary">Traces the full arc of the digital revolution from Ada Lovelace through the internet, showing that every major breakthrough&mdash;the transistor, the microchip, the PC, the web&mdash;was the product of collaborative teams, not solo inventors. A compelling argument that sustained innovation requires both individual brilliance and the ability to work across disciplines.</p>
         </div>
       </div>
+      </details>
     </section>
 
     <!-- ════ LINKS ════ -->
