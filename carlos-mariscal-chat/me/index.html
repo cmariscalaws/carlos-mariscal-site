@@ -372,15 +372,16 @@
     }
     .chat-panel {
       position: fixed; bottom: 100px; right: 28px; z-index: 201;
-      width: 380px; max-height: 520px;
+      width: 420px; height: 550px;
       background: var(--panel); border: 1px solid var(--border);
       border-radius: 20px; box-shadow: 0 8px 40px rgba(0,0,0,0.5);
       display: none; flex-direction: column; overflow: hidden;
     }
     .chat-panel.open { display: flex; }
     .chat-panel-header {
-      padding: 16px 20px; border-bottom: 1px solid var(--border);
+      padding: 14px 20px; border-bottom: 1px solid var(--border);
       display: flex; align-items: center; justify-content: space-between;
+      flex-shrink: 0;
     }
     .chat-panel-header h3 { color: #fff; font-size: 0.95rem; font-weight: 700; }
     .chat-close {
@@ -388,36 +389,11 @@
       font-size: 1.3rem; padding: 0; line-height: 1; transition: color 0.2s;
     }
     .chat-close:hover { color: #fff; }
-    .chat-body {
-      flex: 1; padding: 20px; overflow-y: auto;
-      display: flex; flex-direction: column; gap: 12px;
+    .chat-panel iframe {
+      flex: 1; width: 100%; border: none; border-radius: 0 0 20px 20px;
     }
-    .chat-bubble {
-      background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.15);
-      border-radius: 14px; padding: 14px 16px;
-      color: var(--text); font-size: 0.88rem; line-height: 1.6;
-    }
-    .chat-input-row {
-      padding: 14px 16px; border-top: 1px solid var(--border);
-      display: flex; gap: 10px;
-    }
-    .chat-input {
-      flex: 1; background: rgba(148,163,184,0.08); border: 1px solid var(--border);
-      border-radius: 10px; padding: 10px 14px; color: var(--text);
-      font-size: 0.88rem; font-family: inherit; outline: none;
-      transition: border-color 0.2s;
-    }
-    .chat-input::placeholder { color: var(--muted); }
-    .chat-input:focus { border-color: rgba(56,189,248,0.4); }
-    .chat-send {
-      background: linear-gradient(135deg, #2563eb, #38bdf8);
-      border: none; border-radius: 10px; padding: 10px 14px;
-      color: #fff; cursor: pointer; font-weight: 600; font-size: 0.85rem;
-      transition: opacity 0.2s;
-    }
-    .chat-send:hover { opacity: 0.85; }
     @media (max-width: 600px) {
-      .chat-panel { right: 12px; left: 12px; width: auto; bottom: 96px; }
+      .chat-panel { right: 12px; left: 12px; width: auto; bottom: 96px; height: 480px; }
       .chat-fab { bottom: 20px; right: 20px; }
       .chat-fab-pulse { bottom: 20px; right: 20px; }
       .chat-fab-label { display: none; }
@@ -1084,15 +1060,7 @@
       <h3>Carlos's AI Assistant</h3>
       <button class="chat-close" onclick="toggleChat()">&times;</button>
     </div>
-    <div class="chat-body">
-      <div class="chat-bubble">
-        Hi! I'm Carlos's AI assistant. Ask me about his experience, architecture work, technical skills, or anything else you'd like to know. <br><br><em>Agent coming soon — check back shortly.</em>
-      </div>
-    </div>
-    <div class="chat-input-row">
-      <input class="chat-input" type="text" placeholder="Ask about my experience..." disabled />
-      <button class="chat-send" disabled>Send</button>
-    </div>
+    <iframe src="https://cmariscal-carlos-mariscal-chat.hf.space" title="Carlos's AI Assistant" loading="lazy"></iframe>
   </div>
 
   <script>
