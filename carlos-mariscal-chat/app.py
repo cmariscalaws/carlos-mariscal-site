@@ -125,6 +125,7 @@ class Me:
 - If someone asks about something not covered in the context, use the record_unknown_question tool to log it, then let them know you'd be happy to discuss it directly via email.
 - If someone seems interested in working together or hiring Carlos, naturally ask for their email and use the record_user_details tool. Don't be pushy — wait for genuine engagement.
 - Keep responses concise but substantive. Aim for 2-4 paragraphs for detailed questions, 1-2 for simple ones.
+- For questions you CANNOT answer from the provided context, respond in 1-2 sentences max. Briefly say you don't have that info and suggest reaching out via email. Do NOT pad the response.
 - You can discuss personal background (Navy service, family, education story) when asked — these are part of Carlos's identity and story.
 
 ## Topics You Should Handle Well
@@ -151,20 +152,51 @@ class Me:
 ---
 With all of this context, represent Carlos faithfully. Be the kind of assistant that makes a hiring manager think "I need to talk to this person." """
 
+    def _stream_response(self, messages):
+        """Stream a response, handling tool calls if they occur. Yields partial text."""
+        stream = self.openai.chat.completions.create(
+            model="gpt-4o-mini", messages=messages, tools=tools, stream=True
+        )
+        result = ""
+        tool_calls_acc = {}
+        finish_reason = None
+
+        for chunk in stream:
+            choice = chunk.choices[0] if chunk.choices else None
+            if not choice:
+                continue
+            finish_reason = choice.finish_reason or finish_reason
+            delta = choice.delta
+
+            if delta and delta.content:
+                result += delta.content
+                yield result
+
+            if delta and delta.tool_calls:
+                for tc in delta.tool_calls:
+                    idx = tc.index
+                    if idx not in tool_calls_acc:
+                        tool_calls_acc[idx] = {"id": tc.id, "name": tc.function.name, "arguments": ""}
+                    if tc.function.arguments:
+                        tool_calls_acc[idx]["arguments"] += tc.function.arguments
+
+        if finish_reason == "tool_calls" and tool_calls_acc:
+            from openai.types.chat import ChatCompletionMessageToolCall
+            from openai.types.chat.chat_completion_message_tool_call import Function
+            tool_call_objs = [
+                ChatCompletionMessageToolCall(
+                    id=tc["id"], type="function",
+                    function=Function(name=tc["name"], arguments=tc["arguments"])
+                ) for tc in tool_calls_acc.values()
+            ]
+            messages.append({"role": "assistant", "tool_calls": tool_call_objs})
+            results = self.handle_tool_call(tool_call_objs)
+            messages.extend(results)
+            yield from self._stream_response(messages)
+
     def chat(self, message, history):
         messages = [{"role": "system", "content": self.system_prompt()}] + history + [{"role": "user", "content": message}]
-        done = False
-        while not done:
-            response = self.openai.chat.completions.create(model="gpt-4o-mini", messages=messages, tools=tools)
-            if response.choices[0].finish_reason == "tool_calls":
-                message = response.choices[0].message
-                tool_calls = message.tool_calls
-                results = self.handle_tool_call(tool_calls)
-                messages.append(message)
-                messages.extend(results)
-            else:
-                done = True
-        return response.choices[0].message.content
+        yield from self._stream_response(messages)
     
 
 if __name__ == "__main__":
