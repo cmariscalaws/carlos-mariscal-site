@@ -204,6 +204,32 @@ Udemy Courses:
 - **AI Engineer Agentic Track: The Complete Agent & MCP Course** — Currently in progress (20% complete). Covers building AI agents and the Model Context Protocol.
 - **AI Engineer Production Track: Deploy LLMs & Agents at Scale** — Queued up next. Focused on productionizing LLMs and deploying AI agents at scale.
 
+## Personal: Favorite Project
+
+Carlos's favorite project is AIDA — the AI-powered support channel Slack bot he built at Intuit. It holds a special place because it was his introduction to working with AI in a production environment.
+
+The project started when a senior team member, Bryan K., who had significant prior AI experience, introduced the idea of building an agentic framework that could answer support questions using tools built by the support team. Bryan's mentorship was instrumental — Carlos learned a tremendous amount from him about how to think about AI systems.
+
+What made the project personally meaningful was the combination of owning the full stack — from prompt engineering and agentic orchestration to deployment — and then seeing the real-world impact: 220+ support channels served, handling 85% of Intuit's support traffic. It wasn't a prototype or an experiment; it was a production system that changed how the organization operated.
+
+The biggest learning curve was understanding agentic patterns — how to design tool orchestration, decision-making flows, and give an AI system the right capabilities to solve problems autonomously rather than just generating text.
+
+This project fundamentally changed Carlos as an engineer. He became an AI advocate who now looks for AI-driven solutions first. It shifted his career direction toward AI/ML engineering. It made him a better architect by forcing him to think about non-deterministic systems. And it inspired him to mentor others on AI, paying forward what Bryan taught him.
+
+## Personal: Favorite Team Experience
+
+Carlos's favorite development team experience was leading the Online Billing team at Intuit. It was the first time he had the opportunity to build, mentor, and lead a development team from the ground up — a team of 6-10 engineers.
+
+What made it special wasn't just the technical work — it was the culture they built together. The team genuinely enjoyed working with each other, and that energy showed in the quality of what they delivered. It was the kind of environment where people pushed each other to grow while having fun doing it.
+
+Carlos is especially proud of what happened after: many of the team members went on to advance significantly in their careers, and several have pointed back to this team as the best development experience they've had. For Carlos, that's the most meaningful measure of leadership — not the systems you build, but the engineers you help grow.
+
+This experience cemented his belief that building strong teams is just as important as building strong architecture, and it's a big part of why "team builder" is central to how he defines himself as a Staff engineer.
+
+## Personal: Background & Interests
+
+Carlos was born in Los Angeles and raised in Huntington Park, a city in LA County. He grew up a die-hard Los Angeles Dodgers fan — baseball is his favorite sport. He moved to San Diego when the Navy stationed him there, and he's been there ever since. He loves San Diego for the perfect 72-degree weather with no humidity and the relaxed atmosphere. It's home.
+
 ## Key Talking Points
 
 - I position myself as a Staff Software Engineer who leads through architecture, technical execution, and team building.
