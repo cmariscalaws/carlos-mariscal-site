@@ -55,3 +55,13 @@ Selected recommendations from colleagues, managers, and engineers that speak to 
 > "Carlos is a very sharp, detail-oriented and dependable senior software developer with advanced skills in enterprise-wide web development. He started making significant contributions to the project within a week of starting work and within a month he was already leading a project with accolades from anyone and everyone he interacted with."
 
 > "He is the kind of person who makes the Manager's job easy because there is no need to manage him."
+
+---
+
+## Technical Leadership & Modernization
+
+### Dheeraj Williams Murthaty — Technical Program Manager, Ex-Deloitte (2+ years together at Intuit)
+
+> "I had the pleasure of working with Carlos for 2+ years at Intuit. As a Staff Engineer / Tech Lead, he has demonstrated technical expertise, accountability and leadership consistently. He played a crucial role in orchestrating the legacy services to the modern microservices. He also implemented and recommended CI/CD and performance optimizations at the early stage of dev."
+
+> "He led a team which owned the Signup APIs with adept ownership and resolved many high priority & customer impacting issues. He has also mentored junior engineers on the team and has consistently nurtured and invested in their development. I highly recommend Carlos to anyone seeking a great Engineer and a true leader!"
