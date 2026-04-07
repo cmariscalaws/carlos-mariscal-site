@@ -21,7 +21,6 @@ Designed and built a multi-service AI support assistant integrating:
 - **Metrics Dashboard (Java, Spring Boot, DynamoDB):** Tracks escalation rates, bot response accuracy, and support volumes for data-driven operational improvements.
 - **Retry Architecture:** Dedicated retry service and retry events queue for handling transient failures with automatic retries.
 
-![AIDA Service Architecture](../images/aida-service-architecture.png)
 
 ### Technologies
 
@@ -57,7 +56,6 @@ Led the end-to-end architecture, design, and implementation of an event-driven s
 - **Resilience:** API Request Retry mechanism for Bridger unavailability, Screening Event Retry with exhaustion handling, and comprehensive error storage in Data Feeder Errors.
 - **CSV Ingestion:** Client-facing CSV upload capability for OM Agent batch screenings via S3.
 
-![Sanctions Screening Architecture](../images/sanctions-architecture.png)
 
 ### Technologies
 
@@ -131,9 +129,6 @@ Designed a comprehensive event-driven idempotency solution with an 18-page detai
 - **Poison Message Handling:** Dedicated retry consumer with configurable exhaustion thresholds. Exhausted messages are surfaced in the tracking UI for manual intervention.
 - **Data Lifecycle:** Cron job purges completed documents after 3 days, failed after 7 days, and all documents after 30 days.
 
-![Signup Async Data Flow](../images/signup-architecture.png)
-
-![Idempotency Data Flow](../images/signup-idempotency-architecture.png)
 
 ### Technologies
 

@@ -9,7 +9,7 @@ Personal website and AI chatbot for Carlos Mariscal — Staff Software Engineer.
 
 ```
 ├── index.html              # Main website (single-file, static)
-├── images/                 # Architecture diagrams & AWS cert badges
+├── images/                 # Headshot & AWS cert badges
 ├── resources/              # Source documents (resume PDF, design docs, recommendations)
 ├── docs/                   # Markdown profile files (generated from resources)
 │   ├── profile.md
