@@ -155,7 +155,8 @@ With all of this context, represent Carlos faithfully. Be the kind of assistant 
     def _stream_response(self, messages):
         """Stream a response, handling tool calls if they occur. Yields partial text."""
         stream = self.openai.chat.completions.create(
-            model="gpt-4o-mini", messages=messages, tools=tools, stream=True
+            model="gpt-4o-mini", messages=messages, tools=tools, stream=True,
+            max_tokens=600,
         )
         result = ""
         tool_calls_acc = {}
@@ -194,8 +195,21 @@ With all of this context, represent Carlos faithfully. Be the kind of assistant 
             messages.extend(results)
             yield from self._stream_response(messages)
 
+    MAX_MESSAGES_PER_SESSION = 20
+    MAX_INPUT_CHARS = 1000
+    MAX_HISTORY_MESSAGES = 10
+
     def chat(self, message, history):
-        messages = [{"role": "system", "content": self.system_prompt()}] + history + [{"role": "user", "content": message}]
+        if len(history) >= self.MAX_MESSAGES_PER_SESSION:
+            yield "I've really enjoyed our conversation, but I've hit my limit for this session! Feel free to reach out directly at contact@carlos-mariscal.com to continue the discussion."
+            return
+
+        if len(message) > self.MAX_INPUT_CHARS:
+            yield f"Your message is a bit long for me to process (max {self.MAX_INPUT_CHARS} characters). Could you shorten it a bit?"
+            return
+
+        trimmed_history = history[-self.MAX_HISTORY_MESSAGES:]
+        messages = [{"role": "system", "content": self.system_prompt()}] + trimmed_history + [{"role": "user", "content": message}]
         yield from self._stream_response(messages)
     
 
