@@ -39,7 +39,7 @@ Static site hosted on AWS: S3 + CloudFront + Route 53 + ACM.
 
 ```bash
 # Sync website files to S3 (adjust bucket name as needed)
-aws s3 sync . s3://carlos-mariscal.com \
+aws s3 sync . s3://carlos-mariscal-site \
   --exclude ".*" \
   --exclude "resources/*" \
   --exclude "docs/*" \
@@ -49,7 +49,7 @@ aws s3 sync . s3://carlos-mariscal.com \
 
 # Invalidate CloudFront cache
 aws cloudfront create-invalidation \
-  --distribution-id YOUR_DISTRIBUTION_ID \
+  --distribution-id E2MYZABGCCNUO9 \
   --paths "/*"
 ```
 
